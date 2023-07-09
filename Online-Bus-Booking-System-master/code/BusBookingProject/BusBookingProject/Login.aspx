@@ -19,8 +19,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" style="background-color: aqua;">
     <div class="padding100" style="margin-top:3%; background-image: url('<%= ResolveUrl("~/img/userlogin.jpg") %>'); background-size: cover; background-position: center;">
-        <div class="container">
-            <div id="loginbox" style="margin-top: 7%; margin-bottom:4%" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="container text-center">
+            <div id="loginbox" style="margin-top: 7%; margin-bottom:5%" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                 <div class="panel panel-default" style="background-color: rgba(255, 255, 255, 0.8); box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;">
                     <div class="panel-heading panel-heading-custom">
                         <div class="panel-title">
@@ -44,14 +44,15 @@
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword" Display="None" CssClass="text-danger" ID="rfvPassword"
                                     ErrorMessage="The password field is required." ValidationGroup="vgLogin" />
                             </div>
-                            <div class="input-group">
+                            <%--<div class="input-group">
                                 <div class="checkbox">
                                     <label>
                                         <asp:CheckBox runat="server" ID="RememberMe" />
                                         <asp:Label runat="server" AssociatedControlID="RememberMe">Remember me</asp:Label>
                                     </label>
                                 </div>
-                            </div>
+                            </div>--%>
+                            <br />
                             <div class="form-group">
                                 <!-- Button -->
                                 <div class="col-sm-12 controls">
