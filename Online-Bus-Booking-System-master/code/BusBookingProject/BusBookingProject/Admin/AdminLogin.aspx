@@ -16,13 +16,16 @@
             color: #46b8da;
             font-size: 11px;
         }
+         .auto-style2 {
+             top: -2px;
+         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="padding100" style="margin-top:3%; background-image: url('<%= ResolveUrl("~/img/adminlogin.jpg") %>'); background-size: cover; background-position: center;">
         <div class="container">
-            <div id="loginbox" style="margin-top: 7%; margin-bottom:6%" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                <div class="panel panel-default">
+            <div id="loginbox" style="margin-top: 7%; margin-bottom:10%" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-default" style="background-color: rgba(255, 255, 255, 0.8); box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;">
                     <div class="panel-heading panel-heading-custom">
                         <div class="panel-title">
                             Admin Login
@@ -45,18 +48,10 @@
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword" Display="None" CssClass="text-danger" ID="rfvPassword"
                                     ErrorMessage="The password field is required." ValidationGroup="vgLogin" />
                             </div>
-                            <div class="input-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <asp:CheckBox runat="server" ID="RememberMe" />
-                                        <asp:Label runat="server" AssociatedControlID="RememberMe">Remember me</asp:Label>
-                                    </label>
-                                </div>
-                            </div>
-                            <div  class="form-group">
+                            <div  class="form-group text-center" style="height: 33px" >
                                 <!-- Button -->
                                 <div class="col-sm-12 controls">
-                                    <asp:Button runat="server" ID="btnLogin" Text="Log in" CssClass="btn btn-success" style="width:auto;"   ValidationGroup="vgLogin" CausesValidation="True" OnClick="btnLogin_Click" /><br /><br />
+                                    <asp:Button runat="server"  ID="btnLogin" Text="Log in" CssClass="btn btn-success" style="width:auto;" ValidationGroup="vgLogin" CausesValidation="True" OnClick="btnLogin_Click" /><br /><br />
                                 </div>
                             </div>
                         </div>

@@ -2,11 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="container" style="margin-top: 5%">
-    </div>
-    <div class="row centered-form" style="margin-top: 5%">
-        <div class="col-lg-8 col-sm-8 col-md-2 col-sm-offset-2 col-md-offset-2">
-            <div class="panel panel-default">
+     <div class="container" style="margin-top: 1%"></div>
+    <div class="row" style="margin-top: 3%; background-image: url('<%= ResolveUrl("~/img/userlogin.jpg") %>'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px;">
+        <div class="col-lg-8 col-md-offset-2">
+            <div class="panel panel-default" style="background-color: rgba(255, 255, 255, 0.8); box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;">
                 <div class="panel-heading">
                     <h3 class="panel-title">New User Registration</h3>
                 </div>
