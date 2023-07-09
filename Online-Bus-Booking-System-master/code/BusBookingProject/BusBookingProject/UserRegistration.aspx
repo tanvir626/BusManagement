@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="container" style="margin-top: 1%"></div>
     <div class="row" style="margin-top: 3%; background-image: url('<%= ResolveUrl("~/img/userlogin.jpg") %>'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px;">
-        <div class="col-lg-8 col-md-offset-2">
+        <div class="col-lg-8 col-md-offset-2 text-center">
             <div class="panel panel-default" style="background-color: rgba(255, 255, 255, 0.8); box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;">
                 <div class="panel-heading">
                     <h3 class="panel-title">New User Registration</h3>
@@ -69,18 +69,15 @@
                                     CssClass="text-danger" ErrorMessage="Pin code is required." /><br />
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6">
-                        <div class="form-group">
-                            <asp:Button ID="btnSave" runat="server" Text="Register" OnClick="btnSave_Click" class="btn btn-info " ValidationGroup="vgRegister"  CausesValidation="True" ViewStateMode="Inherit" />
+                    <%--<div class="col-xs-6 col-sm-6 col-md-6 ">--%>
+                        <div class="form-group" >
+                            <asp:Button ID="btnSave" style="width: 200px;" runat="server" Text="Register" OnClick="btnSave_Click" class="btn btn-info " ValidationGroup="vgRegister"  CausesValidation="True" ViewStateMode="Inherit"  />
                         </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6">
-                        <div class="form-group">
-                            <a href="Login.aspx" class="btn btn-info btn-block">Login</a>
-                        </div>
-                    </div>
+                    <%--</div>--%>
                 </div>
             </div>
         </div>
     </div>
+    <style>
+</style>
 </asp:Content>

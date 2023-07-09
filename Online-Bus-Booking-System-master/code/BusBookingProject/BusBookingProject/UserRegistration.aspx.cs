@@ -76,6 +76,7 @@ namespace BusBookingProject
             txtCity.Text = "";
             txtPassword.Text = "";
             txtEmailID.Text = "";
+            Response.Redirect("Login.aspx");
         }
     }
 }
