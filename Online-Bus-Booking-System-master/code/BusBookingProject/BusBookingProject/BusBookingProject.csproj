@@ -66,7 +66,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="Admin\AdminLogin.aspx" />
+    <Content Include="Admin\BoardingDetails.aspx" />
+    <Content Include="Admin\BookingReport.aspx" />
+    <Content Include="Admin\BusDetails.aspx" />
+    <Content Include="Admin\BusDetailsReport.aspx" />
+    <Content Include="Admin\BusScheduleDetails.aspx" />
+    <Content Include="Admin\css\bootstrap.min.css" />
+    <Content Include="Admin\css\style.css" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Admin\js\bootstrap.min.js" />
+    <Content Include="Admin\js\jquery-1.4.1.js" />
+    <Content Include="Admin\js\jquery.js" />
+    <Content Include="Admin\RouteDetails.aspx" />
+    <Content Include="BookingReport.aspx" />
     <Content Include="BusBookingMaster.Master" />
+    <Content Include="BusBookingReport.aspx" />
     <Content Include="BusBookingSearchDetails.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\fontawesome-webfont.eot" />
@@ -76,6 +93,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="Admin\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\fonts\FontAwesome.otf" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Properties\PublishProfiles\BusBooking.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -107,6 +132,8 @@
     <Content Include="js\jquery-1.4.1.js" />
     <Content Include="js\jquery.js" />
     <Content Include="Login.aspx" />
+    <Content Include="PassengerDetailsInfo.aspx" />
+    <Content Include="SeatDetails.aspx" />
     <Content Include="UserRegistration.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -120,12 +147,89 @@
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BoardingDetails.aspx.cs">
+      <DependentUpon>BoardingDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BoardingDetails.aspx.designer.cs">
+      <DependentUpon>BoardingDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BookingReport.aspx.cs">
+      <DependentUpon>BookingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BookingReport.aspx.designer.cs">
+      <DependentUpon>BookingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BusDetails.aspx.cs">
+      <DependentUpon>BusDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BusDetails.aspx.designer.cs">
+      <DependentUpon>BusDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BusDetailsReport.aspx.cs">
+      <DependentUpon>BusDetailsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BusDetailsReport.aspx.designer.cs">
+      <DependentUpon>BusDetailsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BusScheduleDetails.aspx.cs">
+      <DependentUpon>BusScheduleDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BusScheduleDetails.aspx.designer.cs">
+      <DependentUpon>BusScheduleDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RouteDetails.aspx.cs">
+      <DependentUpon>RouteDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RouteDetails.aspx.designer.cs">
+      <DependentUpon>RouteDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookingReport.aspx.cs">
+      <DependentUpon>BookingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingReport.aspx.designer.cs">
+      <DependentUpon>BookingReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BusBookingMaster.Master.cs">
       <DependentUpon>BusBookingMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BusBookingMaster.Master.designer.cs">
       <DependentUpon>BusBookingMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BusBookingReport.aspx.cs">
+      <DependentUpon>BusBookingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BusBookingReport.aspx.designer.cs">
+      <DependentUpon>BusBookingReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="BusBookingSearchDetails.aspx.cs">
       <DependentUpon>BusBookingSearchDetails.aspx</DependentUpon>
@@ -155,7 +259,21 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PassengerDetailsInfo.aspx.cs">
+      <DependentUpon>PassengerDetailsInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PassengerDetailsInfo.aspx.designer.cs">
+      <DependentUpon>PassengerDetailsInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeatDetails.aspx.cs">
+      <DependentUpon>SeatDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeatDetails.aspx.designer.cs">
+      <DependentUpon>SeatDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserRegistration.aspx.cs">
       <DependentUpon>UserRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +283,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\images\" />
     <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup>

@@ -34,7 +34,6 @@ namespace BusBookingProject
             sqlCmd.CommandType = CommandType.StoredProcedure;
             sqlCmd.Parameters.AddWithValue("@Origin",Convert.ToString(Request.QueryString["Origin"]));
             sqlCmd.Parameters.AddWithValue("@Destination", Convert.ToString(Request.QueryString["Destination"]));
-            sqlCmd.Parameters.AddWithValue("@BustType", Convert.ToString(Request.QueryString["type"]));
             sqlCmd.Parameters.AddWithValue("@TravelDate",Convert.ToString(Request.QueryString["TravelDate"]));
             sqlCmd.CommandText = "ispGetAvailableBusDetails";
             sqlCmd.Connection = connString;
@@ -62,10 +61,9 @@ namespace BusBookingProject
                 HiddenField hdnNewSeatCol = (HiddenField)e.Row.FindControl("hdnSeatColumn");
                 HyperLink hlnkSelect = (HyperLink)e.Row.FindControl("hplnkSelect");
                 Label lblFare = (Label)e.Row.FindControl("lblFare");
-                Label lbltype = (Label)e.Row.FindControl("lbltype");
                 hlnkSelect.NavigateUrl="SeatDetails.aspx?BusID=" + hdnNewBusID.Value + "&Row=" + hdnNewSeatRow.Value + "&Column=" + hdnNewSeatCol.Value+
                     "&Origin=" + Request.QueryString["Origin"] + "&Destination=" + Request.QueryString["Destination"]+
-                    "&TravelDate=" + Request.QueryString["TravelDate"]+"&Fare="+lblFare.Text + "&BustType=" + lbltype.Text;
+                    "&TravelDate=" + Request.QueryString["TravelDate"]+"&Fare="+lblFare.Text;
             }
         }
     }

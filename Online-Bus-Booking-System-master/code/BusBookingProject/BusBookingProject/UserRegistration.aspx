@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
-                        <div class="form-group" align="center">
+                        <div class="form-group">
                             <asp:Button ID="btnSave" runat="server" Text="Register" OnClick="btnSave_Click" class="btn btn-info " ValidationGroup="vgRegister"  CausesValidation="True" ViewStateMode="Inherit" />
                         </div>
                     </div>

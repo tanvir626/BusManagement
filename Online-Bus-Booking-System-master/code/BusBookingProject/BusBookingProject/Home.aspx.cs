@@ -69,7 +69,7 @@ namespace BusBookingProject
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            Response.Redirect("BusBookingSearchDetails.aspx?Origin="+ddlOrigin.SelectedItem.Text+"&Destination="+ddlDestination.SelectedItem.Text+"&TravelDate="+txtDate.Text + "&type=" + DropDownList1.SelectedItem.Text);
+            Response.Redirect("BusBookingSearchDetails.aspx?Origin="+ddlOrigin.SelectedItem.Text+"&Destination="+ddlDestination.SelectedItem.Text+"&TravelDate="+txtDate.Text);
         }
     }
 }

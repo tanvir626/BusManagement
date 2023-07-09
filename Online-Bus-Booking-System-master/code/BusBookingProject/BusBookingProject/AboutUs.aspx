@@ -10,7 +10,14 @@
                 </div>
             </div>
             <div class="panel-body">
-             
+                <p style="font-size:large">
+                    We are among top 10 Service Provider for Online Bus Booking in India,
+                    We have our branches in all Major cities in India,Our Services are very fast 
+                    compare to other Online Portals.We works with Efficieny and provide a
+                    good service Environment to our End Users,24*4 Support Facility is Available,
+                    Each and every query is Resolved with in a Day.
+                </p>
+            </div>
         </div>
     </div>
 </asp:Content>

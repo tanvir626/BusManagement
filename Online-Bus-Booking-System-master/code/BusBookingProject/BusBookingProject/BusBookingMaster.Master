@@ -39,6 +39,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <% if (Session["UserID"] == null)
                            { %>
+                        <li><a runat="server" href="Admin/AdminLogin.aspx" style="font-weight: bold">Admin</a></li>
                         <li><a runat="server" href="UserRegistration.aspx" id="linkRegister" style="font-weight: bold"><i class="glyphicon glyphicon-user"></i> Registration</a></li>
                         <li><a runat="server" href="Login.aspx" id="linkLogin" style="font-weight: bold" title="Login">Login</a></li>
                         
