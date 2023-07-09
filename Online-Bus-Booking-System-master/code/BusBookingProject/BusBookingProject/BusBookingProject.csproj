@@ -115,6 +115,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Home.aspx" />
+    <Content Include="img\adminlogin.jpg" />
     <Content Include="img\banner-home-1.jpg" />
     <Content Include="img\BlockedSeat.png" />
     <Content Include="img\bookedseats.png" />
