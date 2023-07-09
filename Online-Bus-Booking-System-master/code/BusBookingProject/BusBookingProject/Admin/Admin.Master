@@ -56,12 +56,14 @@
         
         </asp:ContentPlaceHolder>
     </div>
-        <footer class="navbar navbar-default navbar-static-top" style="text-align: center;font-weight: bold;margin-top:0%;padding: 10px;">
+       <%-- <footer class="navbar navbar-default navbar-static-top" style="text-align: center;font-weight: bold;margin-top:0%;padding: 10px;">
            <section style="width: 49%; float: left;">Copyright &copy; <%: DateTime.Now.Year %> </section>
-        </footer>
+        </footer>--%>
+       
+        </form>
          <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-1.4.1.js"></script>
-    </form>
+    
 </body>
 </html>

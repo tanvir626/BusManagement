@@ -9,8 +9,8 @@
             /* Firefox 3.6+ */
             background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
             /* IE 10 */
-            background: -ms-radial-gradient(circle, #1a82f7, #2F2727);
-            height: 600px;
+            background: radial-gradient(circle, #1a82f7, #2F2727);
+            /*height: 600px;*/
         }
 
         .centered-form {
@@ -168,5 +168,10 @@
             </div>
         </div>
     </div>
-    
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 </asp:Content>

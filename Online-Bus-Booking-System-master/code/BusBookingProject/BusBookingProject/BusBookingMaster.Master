@@ -12,7 +12,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" >
         <div class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -58,9 +58,14 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-          <footer class="navbar navbar-default navbar-static-top" style="text-align: center;font-weight: bold;margin-top:0%;padding: 10px;">
+          <%--<footer class="navbar navbar-default navbar-static-top" style="text-align: center;font-weight: bold;margin-top:0%;padding: 10px;">
            <section style="width: 49%; float: left;">Copyright &copy; <%: DateTime.Now.Year %> </section>
-        </footer>
+        </footer>--%>
+        <footer class="navbar-default navbar-flex-bottom" style="background-color:black; text-align: center;font-weight: bold;color:red">
+  <div class="container-fluid">
+    <span style="align-content:center;font-display:auto">HELP LINE:12332</span>
+  </div>
+</footer>
     </form>
      <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
