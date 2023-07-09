@@ -61,11 +61,11 @@
           <%--<footer class="navbar navbar-default navbar-static-top" style="text-align: center;font-weight: bold;margin-top:0%;padding: 10px;">
            <section style="width: 49%; float: left;">Copyright &copy; <%: DateTime.Now.Year %> </section>
         </footer>--%>
-        <footer class="navbar-default navbar-flex-bottom" style="background-color:black; text-align: center;font-weight: bold;color:red">
+    <%--    <footer class="navbar-default navbar-flex-bottom" style="background-color:black; text-align: center;font-weight: bold;color:red">
   <div class="container-fluid">
     <span style="align-content:center;font-display:auto">HELP LINE:12332</span>
   </div>
-</footer>
+</footer>--%>
     </form>
      <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

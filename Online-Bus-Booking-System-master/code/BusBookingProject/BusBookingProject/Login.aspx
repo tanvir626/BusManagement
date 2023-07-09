@@ -1,26 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BusBookingMaster.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="BusBookingProject.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <style type="text/css">
-        body {
-            /* Safari 4-5, Chrome 1-9 */
-            background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1a82f7), to(#2F2727));
-            /* Safari 5.1+, Chrome 10+ */
-            background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);
-            /* Firefox 3.6+ */
-            background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
-            /* IE 10 */
-            background: -ms-radial-gradient(circle, #1a82f7, #2F2727);
-            height: 600px;
-        }
-
+    <style type="text/css">
         .centered-form {
             margin-top: 10%;
         }
 
-            .centered-form .panel {
-                background: rgba(255, 255, 255, 0.8);
-                box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
-            }
+        .centered-form .panel {
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+        }
 
         label.label-floatlabel {
             font-weight: bold;
@@ -29,10 +17,10 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="padding100" style="margin-top:3%">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" style="background-color: aqua;">
+    <div class="padding100" style="margin-top:3%; background-image: url('<%= ResolveUrl("~/img/userlogin.jpg") %>'); background-size: cover; background-position: center;">
         <div class="container">
-            <div id="loginbox" style="margin-top: 10%;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div id="loginbox" style="margin-top: 7%; margin-bottom:4%" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading panel-heading-custom">
                         <div class="panel-title">
@@ -64,10 +52,10 @@
                                     </label>
                                 </div>
                             </div>
-                            <div  class="form-group">
+                            <div class="form-group">
                                 <!-- Button -->
                                 <div class="col-sm-12 controls">
-                                    <asp:Button runat="server" ID="btnLogin" Text="Log in" CssClass="btn btn-success" style="width:auto;"   ValidationGroup="vgLogin" CausesValidation="True" OnClick="btnLogin_Click" /><br /><br />
+                                    <asp:Button runat="server" ID="btnLogin" Text="Log in" CssClass="btn btn-success" style="width:auto;" ValidationGroup="vgLogin" CausesValidation="True" OnClick="btnLogin_Click" /><br /><br />
                                     <a href="UserRegistration.aspx">Register as a new user</a>
                                 </div>
                             </div>
@@ -77,9 +65,9 @@
             </div>
         </div>
     </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <footer class="navbar-default navbar-flex-bottom" style="background-color: black; text-align: center; font-weight: bold; color: red;">
+        <div class="container-fluid">
+            <span style="align-content: center; font-display: auto;">HELP LINE:12332</span>
+        </div>
+    </footer>
 </asp:Content>
