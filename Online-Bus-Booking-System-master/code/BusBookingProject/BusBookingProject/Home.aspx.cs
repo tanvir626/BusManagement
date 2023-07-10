@@ -20,8 +20,13 @@ namespace BusBookingProject
         {
             if(!IsPostBack)
             {
-               
-                    bindOriginCity();
+                
+                    DateTime currentDate = DateTime.Today;
+                    DateTime maxDate = currentDate.AddMonths(3);
+                    txtDate.Attributes["min"] = currentDate.ToString("yyyy-MM-dd");
+                    txtDate.Attributes["max"] = maxDate.ToString("yyyy-MM-dd");
+
+                bindOriginCity();
                     bindDextinationCity();
             }
         }
