@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BusBookingProject {
-    
-    
-    public partial class BusBookingSearchDetails {
-        
+namespace BusBookingProject
+{
+
+
+    public partial class BusBookingSearchDetails
+    {
+
         /// <summary>
         /// hlinkSearch control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hlinkSearch;
-        
+
         /// <summary>
         /// gvBusDetails control.
         /// </summary>

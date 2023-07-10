@@ -128,9 +128,9 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="container" style="margin-top:8%">
+     <div class="container" style="margin-top:8%;margin-bottom:4% ;">
          <div class="row ">
-            <div class="col-lg-4 col-sm-4 col-md-2 col-sm-offset-2 col-md-offset-2" style="margin-left:30%">
+            <div class="col-lg-4 col-sm-4 col-md-2 col-sm-offset-2 col-md-offset-2" style="margin-left:30%;background-image: url('<%= ResolveUrl("~/img/searchbus.jpg") %>'); background-size: cover; background-position: center;">
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -181,10 +181,15 @@
             </div>
         </div>
     </div>
+    <footer class="navbar-default navbar-flex-bottom" style="background-color: black; text-align: center; font-weight: bold; color: red;">
+        <div class="container-fluid">
+            <span style="align-content: center; font-display: auto;">HELP LINE:12332</span>
+        </div>
+    </footer>
+    <%--<br />
     <br />
     <br />
     <br />
     <br />
-    <br />
-    <br />
+    <br />--%>
 </asp:Content>

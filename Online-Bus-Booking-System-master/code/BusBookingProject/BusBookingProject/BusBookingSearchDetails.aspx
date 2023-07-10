@@ -2,8 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container" style="margin-top:8%">
-        <asp:HyperLink ID="hlinkSearch" runat="server" NavigateUrl="~/Home.aspx" style="width:10%;align-content:center" class="btn btn-info btn-block">Search Again</asp:HyperLink>
+    <div class="container text-center" style="margin-top:8%">
+        <div style="position: fixed;top: 30%;left: 50%;transform: translate(-50%, -50%);">
+        <asp:HyperLink ID="hlinkSearch" runat="server" NavigateUrl="~/Home.aspx" style="width:120%;font:message-box; align-content:center" class="btn btn-info btn-block">Search Again</asp:HyperLink>
+         </div>
         <asp:GridView ID="gvBusDetails" EmptyDataText="No Record Found...." runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-bordered" OnRowDataBound="gvBusDetails_RowDataBound">
                     <Columns>
                        <asp:TemplateField HeaderText="Bus Name">

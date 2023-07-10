@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -67,5 +68,6 @@ namespace BusBookingProject
                     "&TravelDate=" + Request.QueryString["TravelDate"]+"&Fare="+lblFare.Text + "&BustType="+ Request.QueryString["BustType"];
             }
         }
+       
     }
 }
