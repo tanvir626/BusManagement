@@ -113,7 +113,7 @@
                 color: #2580db;
             }
     </style>
-       <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+       <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
@@ -123,7 +123,9 @@
         $(function () {
             $("#txtReturnJourneyDate").datepicker();
         });
+
   </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="container" style="margin-top:8%">
@@ -154,17 +156,28 @@
                           <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <asp:Label ID="lblDate" runat="server" Text="Travel Date" Font-Bold="true"></asp:Label>
-                                    <asp:TextBox ID="txtDate" runat="server" placeholder="DD/MM/YYYY Format" class="form-control input-sm floatlabel"></asp:TextBox>
+                                    <asp:TextBox ID="txtDate" TextMode="Date" runat="server" class="form-control input-sm floatlabel" Culture="en-GB" />
                                 </div>
                             </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                   <asp:Label ID="lblbustype" runat="server" Text="Type" Font-Bold="true"></asp:Label>
+                                     <asp:DropDownList ID="ddlBustType" class="form-control input-sm floatlabel" runat="server">
+                                         <asp:ListItem>--Select--</asp:ListItem>
+                                         <asp:ListItem>AC</asp:ListItem>
+                                         <asp:ListItem>Normal</asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+
+                                </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <asp:Button ID="btnSearch" runat="server" Text="Search Buses" class="btn btn-info btn-block" OnClick="btnSearch_Click"/>
                                 </div>
                             </div>
-                     
                     </div>
-                </div>
+                    </div>
             </div>
         </div>
     </div>

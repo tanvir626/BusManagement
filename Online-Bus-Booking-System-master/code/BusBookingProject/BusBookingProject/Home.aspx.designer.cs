@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BusBookingProject {
-    
-    
-    public partial class Home {
-        
+namespace BusBookingProject
+{
+
+
+    public partial class Home
+    {
+
         /// <summary>
         /// divMessage control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divMessage;
-        
+
         /// <summary>
         /// lblAccType control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAccType;
-        
+
         /// <summary>
         /// ddlOrigin control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlOrigin;
-        
+
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// ddlDestination control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlDestination;
-        
+
         /// <summary>
         /// lblDate control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDate;
-        
+
         /// <summary>
         /// txtDate control.
         /// </summary>
@@ -74,7 +76,25 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDate;
-        
+
+        /// <summary>
+        /// lblbustype control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblbustype;
+
+        /// <summary>
+        /// ddlBustType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlBustType;
+
         /// <summary>
         /// btnSearch control.
         /// </summary>

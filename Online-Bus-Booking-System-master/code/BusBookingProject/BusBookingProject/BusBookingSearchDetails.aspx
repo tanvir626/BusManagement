@@ -31,6 +31,11 @@
                                <asp:Label ID="lblFare" runat="server" Text='<%# Eval("Fare") %>'></asp:Label>
                            </ItemTemplate>
                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Type">
+                           <ItemTemplate>
+                               <asp:Label ID="lblBusType" runat="server" Text='<%# Eval("BustType") %>'></asp:Label>
+                           </ItemTemplate>
+                       </asp:TemplateField>
                         <asp:TemplateField HeaderText="Action">
                             <ItemTemplate>
                                 <asp:HyperLink ID="hplnkSelect" runat="server" ToolTip="Select Bus">Select Bus</asp:HyperLink>

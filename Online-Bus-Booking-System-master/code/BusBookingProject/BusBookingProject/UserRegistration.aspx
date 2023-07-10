@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="container" style="margin-top: 1%"></div>
-    <div class="row" style="margin-top: 3%; background-image: url('<%= ResolveUrl("~/img/userlogin.jpg") %>'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px;">
+    <div class="row" style="margin-top: 3%; background-image: url('<%= ResolveUrl("~/img/reg.jpg") %>'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px;">
         <div class="col-lg-8 col-md-offset-2 text-center">
             <div class="panel panel-default" style="background-color: rgba(255, 255, 255, 0.8); box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;">
                 <div class="panel-heading">
@@ -63,7 +63,7 @@
                                     CssClass="text-danger" ErrorMessage="City Name is required." /><br />
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="lblPinCode" runat="server" Text="Pincode" Font-Bold="true"></asp:Label>
+                            <asp:Label ID="lblPinCode" runat="server" Text="Postal Code" Font-Bold="true"></asp:Label>
                             <asp:TextBox ID="txtPincode" runat="server" class="form-control input-sm floatlabel" />
                              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPincode" Display="None" ID="rfvPinCode" ValidationGroup="vgRegister"
                                     CssClass="text-danger" ErrorMessage="Pin code is required." /><br />

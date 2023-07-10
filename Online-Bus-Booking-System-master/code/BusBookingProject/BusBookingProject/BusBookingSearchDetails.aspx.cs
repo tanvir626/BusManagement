@@ -35,6 +35,7 @@ namespace BusBookingProject
             sqlCmd.Parameters.AddWithValue("@Origin",Convert.ToString(Request.QueryString["Origin"]));
             sqlCmd.Parameters.AddWithValue("@Destination", Convert.ToString(Request.QueryString["Destination"]));
             sqlCmd.Parameters.AddWithValue("@TravelDate",Convert.ToString(Request.QueryString["TravelDate"]));
+            sqlCmd.Parameters.AddWithValue("@BustType", Convert.ToString(Request.QueryString["BustType"]));
             sqlCmd.CommandText = "ispGetAvailableBusDetails";
             sqlCmd.Connection = connString;
             SqlDataAdapter sda = new SqlDataAdapter(sqlCmd);
@@ -63,7 +64,7 @@ namespace BusBookingProject
                 Label lblFare = (Label)e.Row.FindControl("lblFare");
                 hlnkSelect.NavigateUrl="SeatDetails.aspx?BusID=" + hdnNewBusID.Value + "&Row=" + hdnNewSeatRow.Value + "&Column=" + hdnNewSeatCol.Value+
                     "&Origin=" + Request.QueryString["Origin"] + "&Destination=" + Request.QueryString["Destination"]+
-                    "&TravelDate=" + Request.QueryString["TravelDate"]+"&Fare="+lblFare.Text;
+                    "&TravelDate=" + Request.QueryString["TravelDate"]+"&Fare="+lblFare.Text + "&BustType="+ Request.QueryString["BustType"];
             }
         }
     }

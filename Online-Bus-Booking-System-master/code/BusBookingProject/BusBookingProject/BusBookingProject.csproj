@@ -128,7 +128,7 @@
     <Content Include="img\newSelectedSeat.png" />
     <Content Include="img\notAvailableSeat.png" />
     <Content Include="img\notAvailableSeats.png" />
-    <Content Include="img\radek-homola-nPQHFyVfkXY-unsplash.jpg" />
+    <Content Include="img\reg.jpg" />
     <Content Include="img\selectedseat.png" />
     <Content Include="img\userlogin.jpg" />
     <Content Include="js\bootstrap.min.js" />

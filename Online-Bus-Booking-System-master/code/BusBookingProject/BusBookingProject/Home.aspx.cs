@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -69,7 +70,10 @@ namespace BusBookingProject
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            Response.Redirect("BusBookingSearchDetails.aspx?Origin="+ddlOrigin.SelectedItem.Text+"&Destination="+ddlDestination.SelectedItem.Text+"&TravelDate="+txtDate.Text);
+            string formattedDate = txtDate.Text;
+            DateTime date = DateTime.ParseExact(formattedDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            string finalFormattedDate = date.ToString("dd/MM/yyyy");
+            Response.Redirect("BusBookingSearchDetails.aspx?Origin="+ddlOrigin.SelectedItem.Text+"&Destination="+ddlDestination.SelectedItem.Text+"&TravelDate="+ finalFormattedDate + "&BustType=" + ddlBustType.SelectedItem.Text);
         }
     }
 }
