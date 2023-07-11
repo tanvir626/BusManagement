@@ -101,6 +101,7 @@
     <Content Include="Admin\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Admin\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Properties\PublishProfiles\BusBooking.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -284,6 +285,13 @@
     </Compile>
     <Compile Include="UserRegistration.aspx.designer.cs">
       <DependentUpon>UserRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

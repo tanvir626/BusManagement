@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Web;
@@ -32,10 +33,14 @@ namespace BusBookingProject
             {
                 connString.Open();
             }
+
+            string formattedDate = Request.QueryString["TravelDate"];
+            DateTime date = DateTime.ParseExact(formattedDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            string finalFormattedDate = date.ToString("dd/MM/yyyy");
             sqlCmd.CommandType = CommandType.StoredProcedure;
             sqlCmd.Parameters.AddWithValue("@Origin",Convert.ToString(Request.QueryString["Origin"]));
             sqlCmd.Parameters.AddWithValue("@Destination", Convert.ToString(Request.QueryString["Destination"]));
-            sqlCmd.Parameters.AddWithValue("@TravelDate",Convert.ToString(Request.QueryString["TravelDate"]));
+            sqlCmd.Parameters.AddWithValue("@TravelDate",Convert.ToString(finalFormattedDate));
             sqlCmd.Parameters.AddWithValue("@BustType", Convert.ToString(Request.QueryString["BustType"]));
             sqlCmd.CommandText = "ispGetAvailableBusDetails";
             sqlCmd.Connection = connString;

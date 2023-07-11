@@ -133,7 +133,9 @@
             <div class="col-lg-4 col-sm-4 col-md-2 col-sm-offset-2 col-md-offset-2" style="margin-left:30%;background-image: url('<%= ResolveUrl("~/img/searchbus.jpg") %>'); background-size: cover; background-position: center;">
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                  <div class="panel-heading">
+                      <asp:ValidationSummary ID="vsRegister" runat="server" CssClass="alert alert-danger" ShowSummary="true" ValidationGroup="vgRegister" />
+               
                         <h3 class="panel-title">Search For Available Buses</h3>
                     </div>
                     <div class="panel-body">
@@ -143,6 +145,8 @@
                                    <asp:Label ID="lblAccType" runat="server" Text="From" Font-Bold="true"></asp:Label>
                                      <asp:DropDownList ID="ddlOrigin" class="form-control input-sm floatlabel" runat="server">
                                     </asp:DropDownList>
+                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlOrigin" Display="None" ID="RequiredFieldValidator1" ValidationGroup="vgRegister"
+                                    CssClass="text-danger" ErrorMessage="Please Fill all the box." />
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -150,6 +154,8 @@
                                    <asp:Label ID="Label1" runat="server" Text="To" Font-Bold="true"></asp:Label>
                                      <asp:DropDownList ID="ddlDestination" class="form-control input-sm floatlabel" runat="server">
                                     </asp:DropDownList>
+                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlDestination" Display="None" ID="RequiredFieldValidator2" ValidationGroup="vgRegister"
+                                    CssClass="text-danger" ErrorMessage="Please Fill all the box." />
                                 </div>
 
                                 </div>
@@ -157,26 +163,32 @@
                                 <div class="form-group">
                                     <asp:Label ID="lblDate" runat="server" Text="Travel Date" Font-Bold="true"></asp:Label>
                                     <asp:TextBox ID="txtDate" TextMode="Date" runat="server" class="form-control input-sm floatlabel" Culture="en-GB" />
+                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtDate" Display="None" ID="RequiredFieldValidator3" ValidationGroup="vgRegister"
+                                    CssClass="text-danger" ErrorMessage="Please Fill all the box." />
                                 </div>
                             </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                   <asp:Label ID="lblbustype" runat="server" Text="Type" Font-Bold="true"></asp:Label>
+                                   <asp:Label ID="lblbustype" runat="server" Text="BusType" Font-Bold="true"></asp:Label>
                                      <asp:DropDownList ID="ddlBustType" class="form-control input-sm floatlabel" runat="server">
-                                         <asp:ListItem>--Select--</asp:ListItem>
-                                         <asp:ListItem>AC</asp:ListItem>
-                                         <asp:ListItem>Normal</asp:ListItem>
+                                         <asp:ListItem Text="--Select--" Value=""></asp:ListItem>
+                                         <asp:ListItem Text="AC"></asp:ListItem>
+                                         <asp:ListItem Text="Normal"></asp:ListItem>
                                     </asp:DropDownList>
+                                     <asp:RequiredFieldValidator runat="server"  Display="None" ID="RequiredFieldValidator4" ValidationGroup="vgRegister"
+                                    CssClass="text-danger" ErrorMessage="Please Fill The Bus Type." EnableClientScript="true" ControlToValidate="ddlBustType" />
                                 </div>
 
                                 </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <asp:Button ID="btnSearch" runat="server" Text="Search Buses" class="btn btn-info btn-block" OnClick="btnSearch_Click"/>
-                                </div>
+                                    <asp:Button ID="btnSearch" runat="server" Text="Search Buses" class="btn btn-info btn-block"
+                                         OnClick="btnSearch_Click" ValidationGroup="vgRegister" CausesValidation="true" />
+                                    </div>
                             </div>
                     </div>
+                   
                     </div>
             </div>
         </div>

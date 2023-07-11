@@ -18,31 +18,35 @@ namespace BusBookingProject
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
-                
-                    DateTime currentDate = DateTime.Today;
-                    DateTime maxDate = currentDate.AddMonths(3);
-                    txtDate.Attributes["min"] = currentDate.ToString("yyyy-MM-dd");
-                    txtDate.Attributes["max"] = maxDate.ToString("yyyy-MM-dd");
+
+                DateTime currentDate = DateTime.Today;
+                DateTime maxDate = currentDate.AddMonths(3);
+                txtDate.Attributes["min"] = currentDate.ToString("yyyy-MM-dd");
+                txtDate.Attributes["max"] = maxDate.ToString("yyyy-MM-dd");
 
                 bindOriginCity();
-                    bindDextinationCity();
+                bindDextinationCity();
             }
         }
 
         private void bindOriginCity()
         {
             DataSet dsOrigin = getCity();
-            if(dsOrigin.Tables[0].Rows.Count>0)
+            if (dsOrigin.Tables[0].Rows.Count > 0)
             {
                 ddlOrigin.DataSource = dsOrigin.Tables[0];
                 ddlOrigin.DataTextField = "CityName";
-                ddlOrigin.DataValueField = "CityName";
+                ddlOrigin.DataValueField = "CityID";
                 ddlOrigin.DataBind();
             }
-            ddlOrigin.Items.Insert(0, new ListItem("-Select City--","0"));
+            ddlOrigin.Items.Insert(0, new ListItem("-Select City--", "0"));
+
+           
         }
+
+    
 
         private void bindDextinationCity()
         {
@@ -75,10 +79,8 @@ namespace BusBookingProject
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            string formattedDate = txtDate.Text;
-            DateTime date = DateTime.ParseExact(formattedDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
-            string finalFormattedDate = date.ToString("dd/MM/yyyy");
-            Response.Redirect("BusBookingSearchDetails.aspx?Origin="+ddlOrigin.SelectedItem.Text+"&Destination="+ddlDestination.SelectedItem.Text+"&TravelDate="+ finalFormattedDate + "&BustType=" + ddlBustType.SelectedItem.Text);
+            
+            Response.Redirect("BusBookingSearchDetails.aspx?Origin="+ddlOrigin.SelectedItem.Text+"&Destination="+ddlDestination.SelectedItem.Text+"&TravelDate="+ txtDate.Text + "&BustType=" + ddlBustType.SelectedItem.Text);
         }
     }
 }
