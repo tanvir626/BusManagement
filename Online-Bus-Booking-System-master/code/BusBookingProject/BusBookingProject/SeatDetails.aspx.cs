@@ -21,8 +21,7 @@ namespace BusBookingProject
             {
                 lblForm.Text = Convert.ToString(Request.QueryString["Origin"]);
                 lblTo.Text = Convert.ToString(Request.QueryString["Destination"]);
-                DateTime dtNEw =DateTime.ParseExact(Convert.ToString(Request.QueryString["TravelDate"]),"dd/MM/yyyy",null);
-                lbldate.Text = String.Format("{0:ddd,d MMM,yyyy}", dtNEw);
+                lbldate.Text = String.Format("{0:ddd,d MMM,yyyy}", Convert.ToString(Request.QueryString["TravelDate"]));
                     bingBoardigPoints();
                     string bookedSeatNo = "";
                     DataTable dt = getBookedSeat();

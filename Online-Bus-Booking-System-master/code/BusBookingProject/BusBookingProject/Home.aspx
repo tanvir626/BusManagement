@@ -145,7 +145,7 @@
                                    <asp:Label ID="lblAccType" runat="server" Text="From" Font-Bold="true"></asp:Label>
                                      <asp:DropDownList ID="ddlOrigin" class="form-control input-sm floatlabel" runat="server">
                                     </asp:DropDownList>
-                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlOrigin" Display="None" ID="RequiredFieldValidator1" ValidationGroup="vgRegister"
+                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlOrigin" Display="None" ID="rfvOrigin" ValidationGroup="vgRegister"
                                     CssClass="text-danger" ErrorMessage="Please Fill all the box." />
                                 </div>
                             </div>
