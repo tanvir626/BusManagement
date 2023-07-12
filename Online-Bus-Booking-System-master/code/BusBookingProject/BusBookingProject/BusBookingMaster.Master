@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div style="background-color:white">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

@@ -41,7 +41,7 @@ namespace BusBookingProject
                 ddlOrigin.DataValueField = "CityID";
                 ddlOrigin.DataBind();
             }
-            ddlOrigin.Items.Insert(0, new ListItem("-Select City--", "0"));
+            ddlOrigin.Items.Insert(0, new ListItem("--Select City--", "0"));
 
      
         }
@@ -60,7 +60,7 @@ namespace BusBookingProject
                 ddlDestination.DataValueField = "CityName";
                 ddlDestination.DataBind();
             }
-            ddlDestination.Items.Insert(0, new ListItem("-Select City--", "0"));
+            ddlDestination.Items.Insert(0, new ListItem("--Select City--", "0"));
         }
 
         private DataSet getCity()
