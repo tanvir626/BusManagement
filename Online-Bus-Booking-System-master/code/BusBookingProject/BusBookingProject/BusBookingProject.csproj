@@ -72,6 +72,7 @@
     <Content Include="Admin\BusDetails.aspx" />
     <Content Include="Admin\BusDetailsReport.aspx" />
     <Content Include="Admin\BusScheduleDetails.aspx" />
+    <Content Include="Admin\BusTicktSalesReport.aspx" />
     <Content Include="Admin\css\bootstrap.min.css" />
     <Content Include="Admin\css\style.css" />
     <Content Include="Admin\Default.aspx" />
@@ -200,6 +201,13 @@
     </Compile>
     <Compile Include="Admin\BusScheduleDetails.aspx.designer.cs">
       <DependentUpon>BusScheduleDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BusTicktSalesReport.aspx.cs">
+      <DependentUpon>BusTicktSalesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BusTicktSalesReport.aspx.designer.cs">
+      <DependentUpon>BusTicktSalesReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

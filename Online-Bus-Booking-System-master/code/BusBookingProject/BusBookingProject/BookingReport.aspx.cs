@@ -21,9 +21,9 @@ namespace BusBookingProject
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
-                if(Session["UserID"]!=null)
+                if (Session["UserID"] != null)
                 {
                     bindPnrDetails();
                     //Request.QueryString["Message"] = "";
@@ -56,7 +56,7 @@ namespace BusBookingProject
                 connString.Open();
             }
             sqlCmd.CommandType = CommandType.StoredProcedure;
-            sqlCmd.Parameters.AddWithValue("@UserID",Convert.ToInt32(Session["UserID"]));
+            sqlCmd.Parameters.AddWithValue("@UserID", Convert.ToInt32(Session["UserID"]));
             sqlCmd.CommandText = "ispGetPNRDetails";
             sqlCmd.Connection = connString;
             SqlDataAdapter sda = new SqlDataAdapter(sqlCmd);
@@ -102,32 +102,32 @@ namespace BusBookingProject
             //lblDepartureTime.Text = Convert.ToString(dsGetData.Tables[1].Rows[0]["DeptTime"]);
             lblTotalAmount.Text = Convert.ToString(dsGetData.Tables[1].Rows[0]["Amount"]);
             lblTotalTickets.Text = Convert.ToString(dsGetData.Tables[1].Rows[0]["TotalTickets"]);
-                        using (StringWriter sw = new StringWriter())
-                        {
-                            using (HtmlTextWriter hw = new HtmlTextWriter(sw))
-                            {
-                                StringBuilder sb = new StringBuilder();
-                                //generate header
-                                //export html string as a pdf
-                                ticket.RenderControl(hw);
-                                //tbtPNR.RenderControl(hw);
-                                // gdPaxDetails.RenderControl(hw);
-                                StringReader sr = new StringReader(sw.ToString());
-                                Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 10f, 0);
-                                PdfWriter writer = PdfWriter.GetInstance(pdfDoc, Response.OutputStream);
-                                pdfDoc.Open();
-                                pdfDoc.NewPage();
-                                XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
-                                pdfDoc.Close();
-                                Response.ContentType = "application/pdf";
-                                Response.AddHeader("content-disposition", "attachement;filename=Ticket" + ".pdf");
-                                Response.Cache.SetCacheability(HttpCacheability.NoCache);
-                                Response.Write(pdfDoc);
-                                Response.End();
-                            }
-                        }
+            using (StringWriter sw = new StringWriter())
+            {
+                using (HtmlTextWriter hw = new HtmlTextWriter(sw))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    //generate header
+                    //export html string as a pdf
+                    ticket.RenderControl(hw);
+                    //tbtPNR.RenderControl(hw);
+                    // gdPaxDetails.RenderControl(hw);
+                    StringReader sr = new StringReader(sw.ToString());
+                    Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 10f, 0);
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, Response.OutputStream);
+                    pdfDoc.Open();
+                    pdfDoc.NewPage();
+                    XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                    pdfDoc.Close();
+                    Response.ContentType = "application/pdf";
+                    Response.AddHeader("content-disposition", "attachement;filename=Ticket" + ".pdf");
+                    Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                    Response.Write(pdfDoc);
+                    Response.End();
+                }
+            }
 
-                    }
+        } 
         
 
         protected void gdTicketReport_RowCommand(object sender, GridViewCommandEventArgs e)

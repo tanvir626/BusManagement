@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BusBookingMaster.Master" AutoEventWireup="true" CodeBehind="BookingReport.aspx.cs" Inherits="BusBookingProject.BookingReport" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            font-weight: bold;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container" style="margin-top:6%">
@@ -50,6 +55,11 @@
                             <td style="font-weight: bold">Bus Name</td>
                             <td>
                                 <asp:Label ID="lblBusName" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style1">Travel Date</td>
+                            <td>
+                                <asp:Label ID="lbltraveldate" runat="server"></asp:Label></td>
                         </tr>
                     </table>
                 </div>
