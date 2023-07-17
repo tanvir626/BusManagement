@@ -282,7 +282,7 @@ namespace BusBookingProject
 
         protected void btnConirmBooking_Click(object sender, EventArgs e)
         {
-            paymentMode.Visible = true;
+            paymentOption.Visible = true;
         }
 
        
@@ -327,5 +327,21 @@ namespace BusBookingProject
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Booking Failed ,Network Error,Please contact your system administrator')", true);
             }
         }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(DropDownList1.SelectedValue=="Online")
+            {
+                paymentMode.Visible = false;
+                Onlinepayment.Visible = true;
+            }
+            if(DropDownList1.SelectedValue=="Card")
+            {
+                Onlinepayment.Visible = false;
+                paymentMode.Visible = true;
+            }
+        }
+
+       
     }
 }
