@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BusBookingMaster.Master" AutoEventWireup="true" CodeBehind="PassengerDetailsInfo.aspx.cs" Inherits="BusBookingProject.PassengerDetailsInfo" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            font-size: small;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container" style="margin-top: 8%">
@@ -45,6 +50,49 @@
         <asp:Button ID="btnConirmBooking" runat="server" CssClass="btn btn-success" Style="width: auto; margin-top: 2%" Text="Confirm Booking"
             OnClick="btnConirmBooking_Click" ClientIDMode="Static" />
 
+       <div class="row" id="paymentOption" visible="false" runat="server">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Payment GateWay</h3>
+                </div>
+                <div class="panel-body">
+
+                   <asp:Label ID="Label1" runat="server" Text="Chose Payment Method " Font-Bold="true" CssClass="auto-style1"></asp:Label><asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="41px" Width="152px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                        <asp:ListItem>--Select--</asp:ListItem>
+                        <asp:ListItem>Online</asp:ListItem>
+                        <asp:ListItem>Card</asp:ListItem>
+                    </asp:DropDownList>
+
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="DropDownList1" ErrorMessage="Please Chose Something" ForeColor="Red"></asp:RegularExpressionValidator>
+
+                </div>
+                </div>
+           </div>
+        
+
+        <div class="row" id="Onlinepayment" visible="false" runat="server">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Online payment System</h3>
+                </div>
+                <div class="panel-body text-center" >
+                    <a href="https://payment.bkash.com/redirect/tokenized/?paymentID=TR0000lmbSUwl1689494197448&hash=_UrUVMCdVarNRNv2SDPe1voZGRmGswXn8-r5_Lir*Q(5cqVkEFxyO02*ABygw0FKiImpWGtNI8mCghynqKurMBrLJs()nwREGKCW1689494197607&mode=0000&apiVersion=v1.2.0-beta&wxvNoHistory=true">
+                        <img src="img/bkash.png"  style="Height:152px; Width:209px" />
+                    </a>&nbsp;
+
+                    <a href="https://payment.mynagad.com:30000/check-out/auth/account/MDcxNzE4MTkxNzk5MS42ODMyMjkxOTA2MTUzOTkuMjMwNzE3OTA5MDAwMDE5MDg0MTAuM2FmZGM5YjE5ZjQxODEwY2Y1ZGE=">
+                        <img src="img/nogod.png"  style="Height:152px; Width:209px" />
+                    </a>&nbsp;
+
+                    <a href="https://ecom.dutchbanglabank.com/ecomm2/ClientHandler?card_type=6&trans_id=OV9UJ9KTWO23giFLrQ52C4pBWwY%3D">
+                        <img src="img/rocket.png"  style="Height:152px; Width:209px" />
+                    </a>
+
+                    </div>
+                </div>
+            </div>
+        
+        
         <div class="row" id="paymentMode" runat="server">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -68,11 +116,11 @@
                             <asp:Label ID="lblBankName" runat="server" Text="Select Bank" Font-Bold="true"></asp:Label>
                             <asp:DropDownList ID="ddlBank" runat="server" class="form-control input-sm floatlabel">
                                 <asp:ListItem Value="0" Text="--Select Bank--"></asp:ListItem>
-                                <asp:ListItem Value="1" Text="State Bank Of India"></asp:ListItem>
-                                <asp:ListItem Value="2" Text="Bank Of India"></asp:ListItem>
-                                <asp:ListItem Value="3" Text="ICICI Bank"></asp:ListItem>
+                                <asp:ListItem Value="1" Text="State Bank Of Bangladesh"></asp:ListItem>
+                                <asp:ListItem Value="2" Text="Bank Of Bangladesh"></asp:ListItem>
+                                <asp:ListItem Value="3" Text="IDLC Bank"></asp:ListItem>
                                 <asp:ListItem Value="4" Text="HDFC Bank"></asp:ListItem>
-                                <asp:ListItem Value="5" Text="Bank Of Baroda"></asp:ListItem>
+                                <asp:ListItem Value="5" Text="Grameen Bank"></asp:ListItem>
                             </asp:DropDownList>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlBank" Display="None" ID="rfVMobileNo" ValidationGroup="vgRegister"
                                 CssClass="text-danger" ErrorMessage="Bank Name is required." /><br />
