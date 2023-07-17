@@ -36,7 +36,7 @@
                         <%} %>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" style="color:white">
                         <% if (Session["UserID"] == null)
                            { %>
                         <li><a runat="server" href="Admin/AdminLogin.aspx" style="font-weight: bold; color: white;">Admin</a></li>
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <div style="background-color:white">
+        <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

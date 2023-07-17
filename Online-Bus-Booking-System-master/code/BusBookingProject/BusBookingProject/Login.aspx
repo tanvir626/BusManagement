@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BusBookingMaster.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="BusBookingProject.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   <%-- <style type="text/css">
+    <style type="text/css">
         .centered-form {
             margin-top: 10%;
         }
@@ -15,7 +15,7 @@
             color: #46b8da;
             font-size: 11px;
         }
-    </style>--%>
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" style="background-color: aqua;">
     <div class="padding100" style="margin-top:3%; background-image: url('<%= ResolveUrl("~/img/userlogin.jpg") %>'); background-size: cover; background-position: center;">

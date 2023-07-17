@@ -15,15 +15,6 @@ namespace BusBookingProject
     {
 
         /// <summary>
-        /// vsRegister control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary vsRegister;
-
-        /// <summary>
         /// divMessage control.
         /// </summary>
         /// <remarks>
@@ -51,15 +42,6 @@ namespace BusBookingProject
         protected global::System.Web.UI.WebControls.DropDownList ddlOrigin;
 
         /// <summary>
-        /// rfvOrigin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvOrigin;
-
-        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -76,15 +58,6 @@ namespace BusBookingProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlDestination;
-
-        /// <summary>
-        /// RequiredFieldValidator2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
         /// lblDate control.
@@ -105,15 +78,6 @@ namespace BusBookingProject
         protected global::System.Web.UI.WebControls.TextBox txtDate;
 
         /// <summary>
-        /// RequiredFieldValidator3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-
-        /// <summary>
         /// lblbustype control.
         /// </summary>
         /// <remarks>
@@ -130,15 +94,6 @@ namespace BusBookingProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlBustType;
-
-        /// <summary>
-        /// RequiredFieldValidator4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
 
         /// <summary>
         /// btnSearch control.

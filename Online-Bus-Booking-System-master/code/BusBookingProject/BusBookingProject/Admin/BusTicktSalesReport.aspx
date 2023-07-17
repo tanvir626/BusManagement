@@ -1,216 +1,43 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="BusTicktSalesReport.aspx.cs" Inherits="BusBookingProject.Admin.BusTicktSalesReport" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        body {
-            /* Safari 4-5, Chrome 1-9 */
-            background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1a82f7), to(#2F2727));
-            /* Safari 5.1+, Chrome 10+ */
-            background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);
-            /* Firefox 3.6+ */
-            background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
-            /* IE 10 */
-            background: radial-gradient(circle, #1a82f7, #2F2727);
-            /*height: 600px;*/
+        .newStyle1 {
+            background-color: #FF00FF;
         }
-
-        .centered-form {
-            margin-top: 10%;
-        }
-
-            .centered-form .panel {
-                background: rgba(255, 255, 255, 0.8);
-                box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
-            }
-
-        label.label-floatlabel {
-            font-weight: bold;
-            color: #46b8da;
-            font-size: 11px;
-        }
-
-         .center-block {
-            float: none;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .input-group .icon-addon .form-control {
-            border-radius: 0;
-        }
-
-        .icon-addon {
-            position: relative;
-            color: #555;
-            display: block;
-        }
-
-            .icon-addon:after,
-            .icon-addon:before {
-                display: table;
-                content: " ";
-            }
-
-            .icon-addon:after {
-                clear: both;
-            }
-
-            .icon-addon.addon-md .glyphicon,
-            .icon-addon .glyphicon,
-            .icon-addon.addon-md .fa,
-            .icon-addon .fa {
-                position: absolute;
-                z-index: 2;
-                left: 10px;
-                font-size: 14px;
-                width: 20px;
-                margin-left: -2.5px;
-                text-align: center;
-                padding: 10px 0;
-                top: 1px;
-            }
-
-            .icon-addon.addon-lg .form-control {
-                line-height: 1.33;
-                height: 46px;
-                font-size: 18px;
-                padding: 10px 16px 10px 40px;
-            }
-
-            .icon-addon.addon-sm .form-control {
-                height: 30px;
-                padding: 5px 10px 5px 28px;
-                font-size: 12px;
-                line-height: 1.5;
-            }
-
-            .icon-addon.addon-lg .fa,
-            .icon-addon.addon-lg .glyphicon {
-                font-size: 18px;
-                margin-left: 0;
-                left: 11px;
-                top: 4px;
-            }
-
-            .icon-addon.addon-md .form-control,
-            .icon-addon .form-control {
-                padding-left: 30px;
-                float: left;
-                font-weight: normal;
-            }
-
-            .icon-addon.addon-sm .fa,
-            .icon-addon.addon-sm .glyphicon {
-                margin-left: 0;
-                font-size: 12px;
-                left: 5px;
-                top: -1px;
-            }
-
-            .icon-addon .form-control:focus + .glyphicon,
-            .icon-addon:hover .glyphicon,
-            .icon-addon .form-control:focus + .fa,
-            .icon-addon:hover .fa {
-                color: #2580db;
-            }
         .auto-style1 {
-            margin-bottom: 15px;
-            width: 300px;
-        }
-        .auto-style2 {
-            left: 0px;
-            top: 0px;
-            width: 937px;
-        }
-        .auto-style3 {
-            width: 361px;
-        }
-        .auto-style4 {
-            width: 155px;
-        }
-        .auto-style5 {
-            width: 155px;
-            font-size: large;
-        }
-        .auto-style6 {
-            font-size: large;
-            color: #FF3300;
+            width: 892px;
         }
     </style>
-       <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $(function () {
-            $("#txtJourneyDate").datepicker();
-        });
-        $(function () {
-            $("#txtReturnJourneyDate").datepicker();
-        });
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-  </script>
+    <div style="margin-top:10%;margin-left:3%" class="auto-style1">
+
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="221px" Width="880px">
+            <AlternatingRowStyle BackColor="White" />
+            <Columns>
+                <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
+                <asp:BoundField DataField="BusName" HeaderText="BusName" SortExpression="BusName" />
+                <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" />
+                <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" />
+                <asp:BoundField DataField="BustType" HeaderText="BustType" SortExpression="BustType" />
+                <asp:BoundField DataField="Fare" HeaderText="Fare" SortExpression="Fare" />
+                <asp:BoundField DataField="BookedSeat" HeaderText="BookedSeat" SortExpression="BookedSeat" />
+                
+            </Columns>
+            <FooterStyle BackColor="#CCCC99" />
+            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+            <RowStyle BackColor="#F7F7DE" />
+            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#FBFBF2" />
+            <SortedAscendingHeaderStyle BackColor="#848384" />
+            <SortedDescendingCellStyle BackColor="#EAEAD3" />
+            <SortedDescendingHeaderStyle BackColor="#575357" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineBusBookingConnectionString %>" SelectCommand="SELECT ScheduleMaster.Date, BusMaster.BusName, BookingMaster.Origin, BookingMaster.Destination, BusMaster.BustType, ScheduleMaster.Fare, ScheduleMaster.BookedSeats AS BookedSeat FROM BookingMaster INNER JOIN ScheduleMaster ON BookingMaster.ScheduleID = ScheduleMaster.ScheduleId INNER JOIN BusMaster ON BookingMaster.BusId = BusMaster.BusId"></asp:SqlDataSource>
+    </div>
+
 
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
-     <div class="container" style="margin-top:5%;margin-bottom:4% ;background-color:white">
-         <div class="row ">
-            <div class="col-lg-4 col-sm-4 col-md-2 col-sm-offset-2 col-md-offset-2" style="margin-left:30%">
 
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-               
-                        <h3 class="panel-title">Search For Available Buses</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div id="divMessage" runat="server" />
-                          <div class="auto-style2">
-                                <div class="auto-style1">
-                                    <asp:Label ID="lblDate" runat="server"   Text="Daily Report" Font-Bold="true"></asp:Label>
-                                    &nbsp;<asp:TextBox ID="txtdaily" runat="server" TextMode="Date"></asp:TextBox>
-                                </div>
-                            </div>
-
-                    </div>
-                   
-                    </div>
-            </div>
-        </div>
-    </div>
-    <div class="container" style="background-color:white">
-         <asp:GridView ID="gdTicketReport" runat="server" EmptyDataText="No Record Found...." AutoGenerateColumns="False" AllowPaging="true" PageSize="20" Width="100%" Font-Size="12">
-                    <Columns>
-                        <asp:TemplateField HeaderText="Sr.No">
-                            <ItemTemplate>
-                                <%# Container.DataItemIndex+1 %>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:BoundField HeaderText="Bus Name" DataField="BusName" />
-                         <asp:BoundField HeaderText="Origin" DataField="Origin" />
-                         <asp:BoundField HeaderText="Destination" DataField="Destination" />
-                         <asp:BoundField HeaderText="Travel Date" DataField="TravelDate" />
-                         <asp:BoundField HeaderText="Fare" DataField="Fare" />
-                    </Columns>
-                </asp:GridView>
-    </div>
-    <div class="container">
-       
-        <table class="nav-justified">
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style5">Total Sales</td>
-                <td>
-                    <asp:Label ID="lblsales" runat="server" Text="Label" CssClass="auto-style6"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
-
-    </div>
-  
-   
-</asp:Content>

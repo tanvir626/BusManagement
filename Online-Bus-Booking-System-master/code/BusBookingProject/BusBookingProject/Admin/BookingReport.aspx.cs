@@ -53,10 +53,5 @@ namespace BusBookingProject.Admin
            }
         
         }
-
-        protected void gdTicketReport_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
