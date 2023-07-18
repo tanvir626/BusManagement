@@ -1,21 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BusBookingMaster.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="BusBookingProject.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .centered-form {
-            margin-top: 10%;
-        }
-
-        .centered-form .panel {
-            background: rgba(255, 255, 255, 0.8);
-            box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
-        }
-
-        label.label-floatlabel {
-            font-weight: bold;
-            color: #46b8da;
-            font-size: 11px;
-        }
-    </style>
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" style="background-color: aqua;">
     <div class="padding100" style="margin-top:3%; background-image: url('<%= ResolveUrl("~/img/userlogin.jpg") %>'); background-size: cover; background-position: center;">
