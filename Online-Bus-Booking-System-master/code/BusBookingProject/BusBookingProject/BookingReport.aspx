@@ -57,7 +57,7 @@
                 <br />
                 <br />
                 <h2 style="font-weight: bold">Passenger's Details</h2>
-                <asp:GridView ID="gdPaxDetails" runat="server" EmptyDataText="No Record Found...." AutoGenerateColumns="False" AllowPaging="true" PageSize="25" CssClass="table table-hover table-bordered" Style="margin-top: 5%" Width="100%">
+                <asp:GridView ID="gdPaxDetails" runat="server" EmptyDataText="No Record Found...." AutoGenerateColumns="False" AllowPaging="True" PageSize="25" CssClass="table table-hover table-bordered" Style="margin-top: 5%" Width="100%">
                     <Columns>
                         <asp:TemplateField HeaderText="Sr.No">
                             <ItemTemplate>
@@ -66,11 +66,11 @@
                         </asp:TemplateField>
                         <asp:BoundField HeaderText="First Name" DataField="Fname" />
                         <asp:BoundField HeaderText="Last Name" DataField="Lname" />
-                        <asp:BoundField HeaderText="Contact" DataField="Contact" />
+                        <asp:BoundField HeaderText="Contact" DataField="Contact" Visible="False" />
                         <asp:BoundField HeaderText="SeatNo" DataField="SeatNo" />
-                         <asp:BoundField HeaderText="Travel Date" DataField="TravelDate" />
-                         <asp:BoundField HeaderText="From" DataField="Origin" />
-                        <asp:BoundField HeaderText="To" DataField="Destination" />
+                         <asp:BoundField HeaderText="Travel Date" DataField="TravelDate" Visible="False" />
+                         <asp:BoundField HeaderText="From" DataField="Origin" Visible="False" />
+                        <asp:BoundField HeaderText="To" DataField="Destination" Visible="False" />
                         <asp:BoundField HeaderText="Boarding Place" DataField="PlaceName" />
                     </Columns>
                 </asp:GridView>

@@ -7,14 +7,28 @@
         .auto-style1 {
             width: 1452px;
         }
-    </style>
+        .auto-style2 {
+            font-size: large;
+        }
+        .auto-style4 {
+            width: 919px;
+        }
+        .auto-style5 {
+            height: 55px;
+            text-align: center;
+        }
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container auto-style1"style="background-color:white;margin-top:5%;margin-left:3%; height: 67px; width: 1198px;" >
-        
-
+    <div class="container auto-style1 text-center"style="background-color:white;margin-top:5%;margin-left:3%; height: 45px; width: 1198px; text-align: center;" >
+        <p class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; From&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; To</span></p>
     </div>
-    <div style="margin-top:1%;margin-left:3%" class="auto-style1">
+    <div class="container auto-style1 text-center"style="background-color:white;margin-top:0%;margin-left:3%; height: 67px; width: 1198px; text-align: center;" >
+        <asp:TextBox runat="server" id="from" placeholder="From" CssClass="form-control" color="black"  style="float:left;margin-left:3%;margin-top:1%;margin-bottom:1%" Height="49px" Width="475px"></asp:TextBox>  
+        <asp:TextBox runat="server" ID="to"  placeholder="To" CssClass="form-control" color="black"  style="float:left;margin-left:4%;margin-right:2%; margin-top:1%;margin-bottom:1%" Height="49px" Width="475px" ForeColor="#000066"></asp:TextBox>
+        <asp:Button ID="Button1" runat="server" Text="Search" ForeColor="Black" Height="43px" style="margin-top:1%;" Width="90px" OnClick="Button1_Click" />
+    </div>
+    <div style="margin-top:0%;margin-left:3%" class="auto-style1">
 
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="311px" Width="1198px">
             <AlternatingRowStyle BackColor="White" />
@@ -47,7 +61,7 @@
                 <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                 </asp:BoundField>
                 
-                <asp:TemplateField HeaderText="SusbTotal">
+                <asp:TemplateField HeaderText="SubTotal">
                     <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                 </asp:TemplateField>
                 
@@ -62,10 +76,39 @@
             <SortedDescendingCellStyle BackColor="#EAEAD3" />
             <SortedDescendingHeaderStyle BackColor="#575357" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineBusBookingConnectionString %>" SelectCommand="SELECT ScheduleMaster.Date, BusMaster.BusName, BookingMaster.Origin, BookingMaster.Destination, BusMaster.BustType, ScheduleMaster.Fare, ScheduleMaster.BookedSeats AS BookedSeat FROM BookingMaster INNER JOIN ScheduleMaster ON BookingMaster.ScheduleID = ScheduleMaster.ScheduleId INNER JOIN BusMaster ON BookingMaster.BusId = BusMaster.BusId ORDER BY ScheduleMaster.Date ASC "></asp:SqlDataSource>
+        <div style="background-color:white" class="auto-style5">
+
+            <h2>
+                <asp:Label ID="Label1" runat="server" Text="Total :"></asp:Label>
+&nbsp;<asp:Label ID="Label2" runat="server" Text="Label" ForeColor="#FF3300"></asp:Label>
+            &nbsp;<asp:Label ID="Label3" runat="server" Text="Taka"></asp:Label>
+            </h2>
+
+        </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineBusBookingConnectionString %>" SelectCommand="SELECT ScheduleMaster.Date, BusMaster.BusName, BookingMaster.Origin, BookingMaster.Destination, BusMaster.BustType, ScheduleMaster.Fare, ScheduleMaster.BookedSeats AS BookedSeat
+FROM BookingMaster
+INNER JOIN ScheduleMaster ON BookingMaster.ScheduleID = ScheduleMaster.ScheduleId
+INNER JOIN BusMaster ON BookingMaster.BusId = BusMaster.BusId
+WHERE ScheduleMaster.Date BETWEEN @start AND @end
+ORDER BY ScheduleMaster.Date ASC;" >
+            <SelectParameters>
+                <asp:ControlParameter ControlID="from" Name="start" PropertyName="Text" />
+                <asp:ControlParameter ControlID="to" Name="end" PropertyName="Text" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineBusBookingConnectionString %>" SelectCommand="SELECT ScheduleMaster.Date, BusMaster.BusName, BookingMaster.Origin, BookingMaster.Destination, BusMaster.BustType, ScheduleMaster.Fare, ScheduleMaster.BookedSeats AS BookedSeat
+FROM BookingMaster
+INNER JOIN ScheduleMaster ON BookingMaster.ScheduleID = ScheduleMaster.ScheduleId
+INNER JOIN BusMaster ON BookingMaster.BusId = BusMaster.BusId
+WHERE ScheduleMaster.Date BETWEEN @start AND @end
+ORDER BY ScheduleMaster.Date ASC;"  >
+            <SelectParameters>
+                <asp:ControlParameter ControlID="from" Name="start" PropertyName="Text" />
+                <asp:ControlParameter ControlID="to" Name="end" PropertyName="Text" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     <br />
     </div>
-
-
+    
 </asp:Content>
 

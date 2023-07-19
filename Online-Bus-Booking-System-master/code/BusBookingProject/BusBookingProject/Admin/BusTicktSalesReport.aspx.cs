@@ -19,7 +19,6 @@ namespace BusBookingProject.Admin
         void a()
         {
             double  total = 0;
-
             foreach (GridViewRow row in GridView1.Rows)
             {
                 // Access the cell value based on its column index
@@ -34,10 +33,22 @@ namespace BusBookingProject.Admin
 
                 // Add the row total to the overall total
                 total += rowTotal;
-                row.Cells[7].Text = Convert.ToString(total);
+
+                row.Cells[7].Text = Convert.ToString(rowTotal);
+                
             }
-            
+            Label2.Text= Convert.ToString(total);
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
+           /// SqlDataSource2.DataBind();
+            GridView1.DataSourceID = "SqlDataSource2";
+            SqlDataSource2.DataBind();
+            a();
+        }
+
+        
     }
 }
