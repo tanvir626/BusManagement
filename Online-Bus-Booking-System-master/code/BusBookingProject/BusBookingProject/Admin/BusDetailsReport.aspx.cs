@@ -68,5 +68,7 @@ namespace BusBookingProject.Admin
                 hlinkSchedule.NavigateUrl = "BusScheduleDetails.aspx?BusID=" + hdnBusID.Value + "&RouteID=" + hdnRouteID.Value;
             }
         }
+
+        
     }
 }

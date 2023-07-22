@@ -3,14 +3,16 @@
     <style type="text/css">
         body {
             /* Safari 4-5, Chrome 1-9 */
-            background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1a82f7), to(#2F2727));
+            /*background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1a82f7), to(#2F2727));*/
             /* Safari 5.1+, Chrome 10+ */
-            background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);
+            /*background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);*/
             /* Firefox 3.6+ */
-            background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
+            /*background: -moz-radial-gradient(circle, #1a82f7, #2F2727);*/
             /* IE 10 */
-            background: radial-gradient(circle, #1a82f7, #2F2727);
+            /*background: radial-gradient(circle, #1a82f7, #2F2727);*/
             /*height: 600px;*/
+
+            background-color: #c1bdba;
         }
 
         .centered-form {
@@ -128,13 +130,13 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="container" style="margin-top:8%;margin-bottom:4% ;">
+    <div class="container" style="margin-top:8%;margin-bottom:4% ;">
          <div class="row ">
-            <div class="col-lg-4 col-sm-4 col-md-2 col-sm-offset-2 col-md-offset-2" style="margin-left:30%;background-image: url('<%= ResolveUrl("~/img/searchbus.jpg") %>'); background-size: cover; background-position: center;">
+            <div class="col-lg-4 col-sm-4 col-md-2 col-sm-offset-2 col-md-offset-2" style="margin-left:32%; background-size: cover; background-position: center;">
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Search For Available Buses</h3>
+                        <h3 class="panel-title text-center">Search For Available Buses</h3>
                     </div>
                     <div class="panel-body">
                         <div id="divMessage" runat="server" />
