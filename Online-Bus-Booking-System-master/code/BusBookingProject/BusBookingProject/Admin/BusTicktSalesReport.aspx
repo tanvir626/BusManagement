@@ -20,7 +20,7 @@
         <p class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
     </div>
     <div class="container auto-style1 text-center"style="background-color:white;margin-top:0%;margin-left:3%; height: 67px; width: 1198px; text-align: center;" >
-        <asp:TextBox runat="server" id="from" placeholder="From" CssClass="form-control" color="black"  style="float:left;margin-left:3%;margin-top:1%;margin-bottom:1%" Height="49px" Width="475px"></asp:TextBox>
+        <asp:TextBox runat="server" type="Date" id="from" placeholder="From" CssClass="form-control" color="black"  style="float:left;margin-left:3%;margin-top:1%;margin-bottom:1%" Height="49px" Width="475px"></asp:TextBox>
         <asp:TextBox runat="server"  ID="to"  placeholder="To" CssClass="form-control" color="black"  style="float:left;margin-left:4%;margin-right:2%; margin-top:1%;margin-bottom:1%" Height="49px" Width="475px" ForeColor="#000066"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" Text="Search" ForeColor="Black" Height="43px" style="margin-top:1%;" Width="90px" OnClick="Button1_Click" />
     </div>
@@ -30,9 +30,12 @@
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" >
-                <ItemStyle HorizontalAlign="Center" VerticalAlign="Bottom" />
+                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                 </asp:BoundField>
                 <asp:BoundField DataField="BusName" HeaderText="BusName" SortExpression="BusName" >
+                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                </asp:BoundField>
+                <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" >
                 <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                 </asp:BoundField>
                 <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" >
