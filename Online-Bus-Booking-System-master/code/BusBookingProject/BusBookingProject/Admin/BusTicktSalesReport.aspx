@@ -20,8 +20,8 @@
         <p class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
     </div>
     <div class="container auto-style1 text-center"style="background-color:white;margin-top:0%;margin-left:3%; height: 67px; width: 1198px; text-align: center;" >
-        <asp:TextBox runat="server" id="from" placeholder="From" CssClass="form-control" color="black"  style="float:left;margin-left:3%;margin-top:1%;margin-bottom:1%" Height="49px" Width="475px"></asp:TextBox>
-        <asp:TextBox runat="server" ID="to"  placeholder="To" CssClass="form-control" color="black"  style="float:left;margin-left:4%;margin-right:2%; margin-top:1%;margin-bottom:1%" Height="49px" Width="475px" ForeColor="#000066"></asp:TextBox>
+        <asp:TextBox runat="server" type="Date" id="from" placeholder="From" CssClass="form-control" color="black"  style="float:left;margin-left:3%;margin-top:1%;margin-bottom:1%" Height="49px" Width="475px"></asp:TextBox>
+        <asp:TextBox runat="server"  ID="to"  placeholder="To" CssClass="form-control" color="black"  style="float:left;margin-left:4%;margin-right:2%; margin-top:1%;margin-bottom:1%" Height="49px" Width="475px" ForeColor="#000066"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" Text="Search" ForeColor="Black" Height="43px" style="margin-top:1%;" Width="90px" OnClick="Button1_Click" />
     </div>
     <div style="margin-top:0%;margin-left:3%; height: 365px;" class="auto-style1">
@@ -29,38 +29,14 @@
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="311px" Width="1198px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" >
-                <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                </asp:BoundField>
-                <asp:BoundField DataField="BusName" HeaderText="BusName" SortExpression="BusName" >
-                <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                </asp:BoundField>
-                <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" >
-                <FooterStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                </asp:BoundField>
-                <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" >
-                <FooterStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                </asp:BoundField>
-                <asp:BoundField DataField="BustType" HeaderText="Bus Type" SortExpression="BustType" >
-                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                </asp:BoundField>
-                <asp:BoundField DataField="Fare" HeaderText="Fare" SortExpression="Fare" >
-                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                </asp:BoundField>
-                <asp:BoundField DataField="BookedSeat" HeaderText="BookedSeat" SortExpression="BookedSeat" >
-                
-                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                </asp:BoundField>
-                
-                <asp:TemplateField HeaderText="SubTotal">
-                    <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                </asp:TemplateField>
-                
+                <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
+                <asp:BoundField DataField="BusName" HeaderText="BusName" SortExpression="BusName" />
+                <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" />
+                <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" />
+                <asp:BoundField DataField="BustType" HeaderText="BustType" SortExpression="BustType" />
+                <asp:BoundField DataField="Fare" HeaderText="Fare" SortExpression="Fare" />
+                <asp:BoundField DataField="BookedSeat" HeaderText="BookedSeat" SortExpression="BookedSeat" />
+                <asp:TemplateField HeaderText="Subtotal"></asp:TemplateField>
             </Columns>
             <FooterStyle BackColor="#CCCC99" />
             <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -72,32 +48,21 @@
             <SortedDescendingCellStyle BackColor="#EAEAD3" />
             <SortedDescendingHeaderStyle BackColor="#575357" />
         </asp:GridView>
+       
         <div style="background-color:white" class="auto-style2">
-
             <h2 class="text-center">
-                <asp:Label ID="Label1" runat="server" Text="Total :"></asp:Label>
-&nbsp;<asp:Label ID="Label2" runat="server" Text="Label" ForeColor="#FF3300"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Total :"></asp:Label>
+&nbsp;<asp:Label ID="Label2" runat="server" Text="0" ForeColor="#FF3300"></asp:Label>
             &nbsp;<asp:Label ID="Label3" runat="server" Text="Taka"></asp:Label>
             </h2>
-
         </div>
+
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineBusBookingConnectionString %>" SelectCommand="SELECT ScheduleMaster.Date, BusMaster.BusName, BookingMaster.Origin, BookingMaster.Destination, BusMaster.BustType, ScheduleMaster.Fare, ScheduleMaster.BookedSeats AS BookedSeat
 FROM BookingMaster
 INNER JOIN ScheduleMaster ON BookingMaster.ScheduleID = ScheduleMaster.ScheduleId
 INNER JOIN BusMaster ON BookingMaster.BusId = BusMaster.BusId
 WHERE ScheduleMaster.Date BETWEEN @start AND @end
 ORDER BY ScheduleMaster.Date ASC;" >
-            <SelectParameters>
-                <asp:ControlParameter ControlID="from" Name="start" PropertyName="Text" />
-                <asp:ControlParameter ControlID="to" Name="end" PropertyName="Text" />
-            </SelectParameters>
-        </asp:SqlDataSource>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineBusBookingConnectionString %>" SelectCommand="SELECT ScheduleMaster.Date, BusMaster.BusName, BookingMaster.Origin, BookingMaster.Destination, BusMaster.BustType, ScheduleMaster.Fare, ScheduleMaster.BookedSeats AS BookedSeat
-FROM BookingMaster
-INNER JOIN ScheduleMaster ON BookingMaster.ScheduleID = ScheduleMaster.ScheduleId
-INNER JOIN BusMaster ON BookingMaster.BusId = BusMaster.BusId
-WHERE ScheduleMaster.Date BETWEEN @start AND @end
-ORDER BY ScheduleMaster.Date ASC;"  >
             <SelectParameters>
                 <asp:ControlParameter ControlID="from" Name="start" PropertyName="Text" />
                 <asp:ControlParameter ControlID="to" Name="end" PropertyName="Text" />
