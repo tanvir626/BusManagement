@@ -39,7 +39,10 @@ ORDER BY ScheduleMaster.Date ASC;">
             </asp:GridView>
             <br />
 
-            <asp:Label ID="Label1" runat="server" Text="Label" ForeColor="Red"></asp:Label></div>
+            <asp:Label ID="Label1" runat="server" Text="Label" ForeColor="Red"></asp:Label>
+            <br />
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
+        </div>
     </form>
 </body>
 </html>

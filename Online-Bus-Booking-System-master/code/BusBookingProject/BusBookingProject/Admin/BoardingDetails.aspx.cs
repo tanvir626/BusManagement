@@ -17,15 +17,18 @@ namespace BusBookingProject.Admin
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            lbltime.Text = Convert.ToString(Request.QueryString["DepartureTime"]);
+            if (!IsPostBack)
             {
-                if(Session["UserName"] !=null)
+                
+                if (Session["UserName"] !=null)
                 {
 
                 }
                 else
                 {
                     Response.Redirect("AdminLogin.aspx");
+                    lbltime.Text = Convert.ToString(Request.QueryString["DepartureTime"]);
                 }
             }
         }

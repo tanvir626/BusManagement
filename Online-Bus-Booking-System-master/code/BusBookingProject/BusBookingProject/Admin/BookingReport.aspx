@@ -19,7 +19,9 @@
                          <asp:BoundField HeaderText="Origin" DataField="Origin" >
                         <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         </asp:BoundField>
-                         <asp:BoundField HeaderText="Destination" DataField="Destination" />
+                         <asp:BoundField HeaderText="Destination" DataField="Destination" >
+                         <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:BoundField>
                          <asp:BoundField HeaderText="Travel Date" DataField="TravelDate" >
                          <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         </asp:BoundField>

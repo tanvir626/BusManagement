@@ -13,21 +13,39 @@
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         </asp:TemplateField >
+                        <asp:TemplateField HeaderText="Bus ID">
+                           <ItemTemplate>
+                               <asp:Label ID="lblBusID" runat="server" Text='<%# Eval("BusID") %>'></asp:Label>
+                           </ItemTemplate>
+                             <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                       </asp:TemplateField>
                          <asp:TemplateField HeaderText="Route ID">
                            <ItemTemplate>
-                               <asp:Label ID="lblBusNo" runat="server" Text='<%# Eval("RouteID") %>'></asp:Label>
+                               <asp:Label ID="lblRouteID" runat="server" Text='<%# Eval("RouteID") %>'></asp:Label>
                            </ItemTemplate>
                              <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                        </asp:TemplateField>
                           <asp:TemplateField HeaderText="Origin">
                            <ItemTemplate>
-                               <asp:Label ID="lblBusName" runat="server" Text='<%# Eval("Origin") %>'></asp:Label>
+                               <asp:Label ID="lblOrigin" runat="server" Text='<%# Eval("Origin") %>'></asp:Label>
                            </ItemTemplate>
                               <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                        </asp:TemplateField>
                          <asp:TemplateField HeaderText="Destination">
                            <ItemTemplate>
-                               <asp:Label ID="lblBusType" runat="server" Text='<%# Eval("Destination") %>'></asp:Label>
+                               <asp:Label ID="lblDestination" runat="server" Text='<%# Eval("Destination") %>'></asp:Label>
+                           </ItemTemplate>
+                             <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                       </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Date">
+                           <ItemTemplate>
+                               <asp:Label ID="lblDate" runat="server" Text='<%# Eval("Date") %>'></asp:Label>
+                           </ItemTemplate>
+                             <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                       </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Departure Time">
+                           <ItemTemplate>
+                               <asp:Label ID="lblDepartureTime" runat="server" Text='<%# Eval("DepartureTime") %>'></asp:Label>
                            </ItemTemplate>
                              <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                        </asp:TemplateField>
@@ -36,6 +54,7 @@
                                 <asp:HyperLink ID="hlinkBoarding" runat="server" >Add Boarding Points</asp:HyperLink>
                                  <asp:HiddenField ID="hdnRouteID" runat="server" Value='<%# Eval("RouteID") %>' />
                                  <asp:HiddenField ID="hdnBusID" runat="server" Value='<%# Eval("BusId") %>' />
+                                <asp:HiddenField ID="hdnDepartureTime" runat="server" Value='<%# Eval("DepartureTime") %>' />
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         </asp:TemplateField>

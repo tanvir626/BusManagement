@@ -30,6 +30,8 @@
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
                             <asp:Button ID="btnAddBoardingDetails" runat="server" Text="Add Boarding Details" style="width:auto" OnClick="btnAddBoardingDetails_Click" class="btn btn-info " ValidationGroup="vgRegister"  CausesValidation="True" ViewStateMode="Inherit" />
+                             <br /><br /><asp:Label ID="text" runat="server" Text="Departure Time :"></asp:Label>
+                            <asp:Label ID="lbltime" runat="server"  ForeColor="Red"></asp:Label>
                         </div>
                     </div>
                 </div>

@@ -63,8 +63,13 @@ namespace BusBookingProject.Admin
                 HyperLink klnikUpdate = (HyperLink)e.Row.FindControl("hlinkBoarding");
                 HiddenField hdnBusID = (HiddenField)e.Row.FindControl("hdnBusID");
                 HiddenField hdnRouteID = (HiddenField)e.Row.FindControl("hdnRouteID");
-                klnikUpdate.NavigateUrl = "BoardingDetails.aspx?BusID=" + hdnBusID.Value + "&RouteID=" + hdnRouteID.Value;
+                HiddenField hdnDepartureTime = (HiddenField)e.Row.FindControl("hdnDepartureTime");
+                klnikUpdate.NavigateUrl = "BoardingDetails.aspx?BusID=" + hdnBusID.Value + "&RouteID=" + hdnRouteID.Value + "&DepartureTime=" + hdnDepartureTime.Value;
             }
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=OnlineBusBooking;Integrated Security=True");
+            con.Open();
+            SqlCommand com = new SqlCommand("");
+            con.Close();
         }
     }
 }
