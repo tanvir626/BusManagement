@@ -16,27 +16,29 @@ namespace BusBookingProject.Admin
         
         protected void Button1_Click(object sender, EventArgs e)
         {
-
             GridView1.DataSourceID = "SqlDataSource1";
             GridView1.DataBind();
             double total = 0;
+            int counter = 0;
+            double rowTotal=0;
             foreach (GridViewRow row in GridView1.Rows)
             {
                 // Access the cell value based on its column index
-                string price = row.Cells[5].Text;
-                string quantity = row.Cells[6].Text;
+                string price = row.Cells[6].Text;
+                string quantity = row.Cells[7].Text;
 
-                double p = Convert.ToDouble(price);
-                double q = Convert.ToDouble(quantity);
-
-                // Perform the calculation
-                double rowTotal = p * q;
-
-                // Add the row total to the overall total
+                double p;
+                double q;
+                if (double.TryParse(price, out p) && double.TryParse(quantity, out q))
+                {
+                     rowTotal = p * q;
+                }
                 total += rowTotal;
-                row.Cells[7].Text = Convert.ToString(rowTotal);
+                row.Cells[8].Text = Convert.ToString(rowTotal);
+                counter++;
             }
             Label2.Text = Convert.ToString(total);
+            Label4.Text = Convert.ToString(counter);
         }
 
         

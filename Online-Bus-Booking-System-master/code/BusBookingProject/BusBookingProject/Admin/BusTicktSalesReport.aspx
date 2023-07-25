@@ -20,7 +20,7 @@
         <p class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
     </div>
     <div class="container auto-style1 text-center"style="background-color:white;margin-top:0%;margin-left:3%; height: 67px; width: 1198px; text-align: center;" >
-        <asp:TextBox runat="server" type="Date" id="from" placeholder="From" CssClass="form-control" color="black"  style="float:left;margin-left:3%;margin-top:1%;margin-bottom:1%" Height="49px" Width="475px"></asp:TextBox>
+        <asp:TextBox runat="server"  id="from" placeholder="From" CssClass="form-control" color="black"  style="float:left;margin-left:3%;margin-top:1%;margin-bottom:1%" Height="49px" Width="475px"></asp:TextBox>
         <asp:TextBox runat="server"  ID="to"  placeholder="To" CssClass="form-control" color="black"  style="float:left;margin-left:4%;margin-right:2%; margin-top:1%;margin-bottom:1%" Height="49px" Width="475px" ForeColor="#000066"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" Text="Search" ForeColor="Black" Height="43px" style="margin-top:1%;" Width="90px" OnClick="Button1_Click" />
     </div>
@@ -29,6 +29,12 @@
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="311px" Width="1198px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
+                <asp:TemplateField HeaderText="Sr.No">
+                            <ItemTemplate>
+                                <%# Container.DataItemIndex+1 %>
+                            </ItemTemplate>
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:TemplateField>
                 <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" >
                 <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                 </asp:BoundField>
@@ -70,6 +76,8 @@
             <asp:Label ID="Label1" runat="server" Text="Total :"></asp:Label>
 &nbsp;<asp:Label ID="Label2" runat="server" Text="0" ForeColor="#FF3300"></asp:Label>
             &nbsp;<asp:Label ID="Label3" runat="server" Text="Taka"></asp:Label>
+            &nbsp;, Ticket Booked :
+                <asp:Label ID="Label4" runat="server" ForeColor="Red" Text="0"></asp:Label>
             </h2>
         </div>
 
