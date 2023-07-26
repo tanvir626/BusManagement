@@ -132,11 +132,8 @@
                                 <li style="background: url('img/newSelectedSeat.png') no-repeat scroll 0 0 transparent; width: 25%; height: 30%; color: white">Selected Seat</li>
                             </ul>
                         </div>
-                        <div style="clear: both; width: 100%; margin-top: 70px;">
-                            <input type="button" id="btnShowNew" value="Show Selected Seats" />
-                            <input type="button" id="btnShow" value="Show All" />
-                        </div>
-                    </div>
+                     </div>
+                    <br />
                     <div class="col-lg-4" style="overflow:auto">
                         <div class="panel panel-danger">
                             <div class="panel panel-heading">

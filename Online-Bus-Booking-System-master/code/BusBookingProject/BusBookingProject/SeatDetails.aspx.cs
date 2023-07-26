@@ -17,23 +17,24 @@ namespace BusBookingProject
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
+
                 lblForm.Text = Convert.ToString(Request.QueryString["Origin"]);
                 lblTo.Text = Convert.ToString(Request.QueryString["Destination"]);
-                DateTime dtNEw =DateTime.ParseExact(Convert.ToString(Request.QueryString["TravelDate"]),"dd/MM/yyyy",null);
+                DateTime dtNEw = DateTime.ParseExact(Convert.ToString(Request.QueryString["TravelDate"]), "dd/MM/yyyy", null);
                 lbldate.Text = String.Format("{0:ddd,d MMM,yyyy}", dtNEw);
-                    bingBoardigPoints();
-                    string bookedSeatNo = "";
-                    DataTable dt = getBookedSeat();
-                    foreach(DataRow dr in dt.Rows)
-                    {
-                        bookedSeatNo+= Convert.ToString(dr["SeatNo"])+",";
-                    }
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "paramFN1", "getSeatLayout('" + Convert.ToInt32(Request.QueryString["Row"]) + "','" + Convert.ToInt32(Request.QueryString["Column"]) + "','" + bookedSeatNo + "','" + Convert.ToDecimal(Request.QueryString["Fare"]) + "');", true);
+                bingBoardigPoints();
+                string bookedSeatNo = "";
+                DataTable dt = getBookedSeat();
+                foreach (DataRow dr in dt.Rows)
+                {
+                    bookedSeatNo += Convert.ToString(dr["SeatNo"]) + ",";
                 }
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "paramFN1", "getSeatLayout('" + Convert.ToInt32(Request.QueryString["Row"]) + "','" + Convert.ToInt32(Request.QueryString["Column"]) + "','" + bookedSeatNo + "','" + Convert.ToDecimal(Request.QueryString["Fare"]) + "');", true);
+                //lbltime.Text = Convert.ToString(Request.QueryString["DepartureTime"]);
             }
-        
+        }        
 
         private void bingBoardigPoints()
         {

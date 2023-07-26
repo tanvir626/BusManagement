@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BusBookingProject {
-    
-    
-    public partial class SeatDetails {
-        
+namespace BusBookingProject
+{
+
+
+    public partial class SeatDetails
+    {
+
         /// <summary>
         /// hrefBackUrl control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor hrefBackUrl;
-        
+
         /// <summary>
         /// lblForm control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblForm;
-        
+
         /// <summary>
         /// lblTo control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTo;
-        
+
         /// <summary>
         /// lbldate control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldate;
-        
+
         /// <summary>
         /// lblSelectedSeat control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSelectedSeat;
-        
+
         /// <summary>
         /// hdnSeatNo control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnSeatNo;
-        
+
         /// <summary>
         /// hdnSeatCount control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnSeatCount;
-        
+
         /// <summary>
         /// hdnSeatTypeID control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnSeatTypeID;
-        
+
         /// <summary>
         /// hdnFare control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnFare;
-        
+
         /// <summary>
         /// hdnTotalFare control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnTotalFare;
-        
+
         /// <summary>
         /// lblPerSeat control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPerSeat;
-        
+
         /// <summary>
         /// lbltotal control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbltotal;
-        
+
         /// <summary>
         /// lblBoardingPoint control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblBoardingPoint;
-        
+
         /// <summary>
         /// ddlBoardingpoints control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlBoardingpoints;
-        
+
         /// <summary>
         /// lblDroppingPoints control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDroppingPoints;
-        
+
         /// <summary>
         /// ddlDroppingpoints control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace BusBookingProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlDroppingpoints;
-        
+
         /// <summary>
         /// btnPayment control.
         /// </summary>

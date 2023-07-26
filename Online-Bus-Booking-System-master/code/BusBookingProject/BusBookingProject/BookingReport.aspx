@@ -43,6 +43,11 @@
                 <div class="table-bordered">
                     <table class="table-striped" id="tbtPNR" runat="server" style="width: 100%; color: green; font-size: large">
                         <tr>
+                            <td style="font-weight: bold">Date</td>
+                            <td>
+                                <asp:Label ID="lblDate" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr>
                             <td style="font-weight: bold">PNR No</td>
                             <td>
                                 <asp:Label ID="lblTransactionNo" runat="server"></asp:Label></td>
@@ -61,6 +66,21 @@
                             <td style="font-weight: bold">Bus Name</td>
                             <td>
                                 <asp:Label ID="lblBusName" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold">Departure Time</td>
+                            <td>
+                                <asp:Label ID="lblDepartureTime" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold">To(Boarding Place)</td>
+                            <td>
+                                <asp:Label ID="lblTo" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold">From</td>
+                            <td>
+                                <asp:Label ID="lblfrom" runat="server"></asp:Label></td>
                         </tr>
                     </table>
                 </div>
@@ -81,7 +101,7 @@
                          <asp:BoundField HeaderText="Travel Date" DataField="TravelDate" Visible="False" />
                          <asp:BoundField HeaderText="From" DataField="Origin" Visible="False" />
                         <asp:BoundField HeaderText="To" DataField="Destination" Visible="False" />
-                        <asp:BoundField HeaderText="Boarding Place" DataField="PlaceName" />
+                        <asp:BoundField HeaderText="Boarding Place" DataField="PlaceName" Visible="False" />
                     </Columns>
                 </asp:GridView>
                 <br />
