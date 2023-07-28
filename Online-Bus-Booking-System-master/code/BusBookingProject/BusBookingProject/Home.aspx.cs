@@ -75,10 +75,14 @@ namespace BusBookingProject
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            Session["dest"] = ddlDestination.SelectedItem.Text;
+          
             string formattedDate = txtDate.Text;
             DateTime date = DateTime.ParseExact(formattedDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
             string finalFormattedDate = date.ToString("dd/MM/yyyy");
+            Session["date"] = finalFormattedDate;
             Response.Redirect("BusBookingSearchDetails.aspx?Origin="+ddlOrigin.SelectedItem.Text+"&Destination="+ddlDestination.SelectedItem.Text+"&TravelDate="+ finalFormattedDate + "&BustType=" + ddlBustType.SelectedItem.Text);
+                    
         }
     }
 }

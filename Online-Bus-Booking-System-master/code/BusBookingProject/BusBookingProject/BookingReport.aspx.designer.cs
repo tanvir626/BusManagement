@@ -105,13 +105,13 @@ namespace BusBookingProject
         protected global::System.Web.UI.WebControls.Label lblTo;
 
         /// <summary>
-        /// lblfrom control.
+        /// lbldestination control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblfrom;
+        protected global::System.Web.UI.WebControls.Label lbldestination;
 
         /// <summary>
         /// gdPaxDetails control.

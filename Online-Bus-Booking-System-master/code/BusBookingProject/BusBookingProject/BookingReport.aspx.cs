@@ -103,7 +103,9 @@ namespace BusBookingProject
             lblTotalAmount.Text = Convert.ToString(dsGetData.Tables[1].Rows[0]["Amount"]);
             lblTotalTickets.Text = Convert.ToString(dsGetData.Tables[1].Rows[0]["TotalTickets"]);
             lblTo.Text = Convert.ToString(dsGetData.Tables[1].Rows[0]["PlaceName"]);
-           // lblfrom.Text = Convert.ToString(dsGetData.Tables[1].Rows[0]["PlaceTime"]);
+            lbldestination.Text= (string)Session["dest"];
+            lblDate.Text = (string)Session["date"];
+            // lblfrom.Text = Convert.ToString(dsGetData.Tables[1].Rows[0]["PlaceTime"]);
             using (StringWriter sw = new StringWriter())
             {
                 using (HtmlTextWriter hw = new HtmlTextWriter(sw))

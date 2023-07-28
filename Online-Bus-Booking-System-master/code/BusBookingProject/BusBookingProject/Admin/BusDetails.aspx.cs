@@ -19,7 +19,8 @@ namespace BusBookingProject.Admin
         {
             if(!IsPostBack)
             {
-                if(Session["UserName"]!=null)
+                ddlBusType.Items.Insert(0, new ListItem("Please select", ""));
+                if (Session["UserName"]!=null)
                 {
                     if(Request.QueryString["BusID"]!=null)
                     {
@@ -116,12 +117,13 @@ namespace BusBookingProject.Admin
                {
                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Bus Details has been added successfully')", true);
                    txtDetination.Text = "";
-                   ddlBusType.SelectedValue = "0";
+                   ddlBusType.SelectedValue = "";
                    txtOrigin.Text = "";
                    txtBusNo.Text = "";
                    txtSeatColumn.Text = "";
                    txtSeatRows.Text = "";
                    txtBusName.Text = "";
+                    Response.Redirect("BusDetailsReport.aspx");
                }
                else
                {

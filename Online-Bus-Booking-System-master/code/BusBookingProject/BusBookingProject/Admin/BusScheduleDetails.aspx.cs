@@ -61,6 +61,7 @@ namespace BusBookingProject.Admin
                 txtDate.Text = "";
                 txtArrival.Text = "";
                 txtFare.Text = "";
+                Response.Redirect("RouteDetails.aspx");
             }
             else
             {

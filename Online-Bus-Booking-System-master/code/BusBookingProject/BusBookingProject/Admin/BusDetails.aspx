@@ -42,13 +42,14 @@
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
                             <asp:Label ID="lblLastName" runat="server" Text="Bus Type" Font-Bold="true"></asp:Label>
-                             <asp:DropDownList ID="ddlBusType" runat="server" class="form-control input-sm floatlabel">
-                                 <asp:ListItem Value="0" Text="Select Bus Type"></asp:ListItem>
+                             <asp:DropDownList ID="ddlBusType" placeHolder="Select Type" runat="server" class="form-control input-sm floatlabel" AutoPostBack="True">
+                                 
                                  <asp:ListItem Value="1" Text="Normal"></asp:ListItem>
                                   <asp:ListItem Value="2" Text="AC"></asp:ListItem>
                              </asp:DropDownList>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlBusType" Display="None" ID="rfVLastName" ValidationGroup="vgRegister"
-                                    CssClass="text-danger" ErrorMessage="Last Name is required." /><br />
+                                    CssClass="text-danger" ErrorMessage="Bus Type is Required" />
+                             <br />
                         </div>
                         
                         <div class="form-group">
