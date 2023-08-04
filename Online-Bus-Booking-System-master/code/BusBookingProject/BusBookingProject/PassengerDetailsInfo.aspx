@@ -69,7 +69,7 @@
 
                    <asp:Label ID="Label1" runat="server" Text="Chose Payment Method " Font-Bold="true" CssClass="auto-style1"></asp:Label><asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="41px" Width="152px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                         <asp:ListItem>--Select--</asp:ListItem>
-                        <asp:ListItem>Online</asp:ListItem>
+                        <asp:ListItem Value="Online">Mobile Banking</asp:ListItem>
                         <asp:ListItem>Card</asp:ListItem>
                     </asp:DropDownList>
 
