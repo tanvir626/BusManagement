@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="container" style="margin-top: 8%">
+     <div class="container" style="margin-top: 5%">
          <asp:GridView ID="gdRouteDetails" runat="server" EmptyDataText="No Record Found...." AutoGenerateColumns="False" AllowPaging="True" PageSize="20" CssClass="table table-hover table-bordered"
                     Width="100%" Font-Size="12pt" OnRowDataBound="gdRouteDetails_RowDataBound" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
                     <AlternatingRowStyle BackColor="White" />

@@ -5,10 +5,20 @@
         .auto-style1 {
             font-size: small;
         }
+        .auto-style2 {
+            height: 52px;
+            margin-top: 49px;
+        }
+        .auto-style3 {
+            color: #FF0000;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container" style="margin-top: 8%">
+    <div class="container" style="margin-top: 2%">
+        <div class="auto-style2">
+            <h1 class="auto-style3">Passanger Information</h1>
+        </div>
         <asp:GridView ID="gdPassengerDetails" runat="server" ShowFooter="true" AutoGenerateColumns="false" Width="100%">
             <Columns>
                 <asp:BoundField DataField="RowNumber" HeaderText="Row Number" />

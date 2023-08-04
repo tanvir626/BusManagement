@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="container" style="margin-top: 5%">
+     <div class="container" style="margin-top: 2%">
     </div>
     <div class="row centered-form" style="margin-top: 5%">
         <div class="col-lg-8 col-sm-8 col-md-2 col-sm-offset-2 col-md-offset-2">
