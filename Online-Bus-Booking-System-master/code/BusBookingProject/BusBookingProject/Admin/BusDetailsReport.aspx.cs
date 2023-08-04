@@ -28,6 +28,10 @@ namespace BusBookingProject.Admin
                     Response.Redirect("AdminLogin.aspx");
                 }
             }
+            if (Request.QueryString["BusID"] != null)
+            {
+                btn_del(Request.QueryString["BusID"]);
+            }
         }
 
         private void bindBusDetailsReport()
@@ -63,12 +67,22 @@ namespace BusBookingProject.Admin
                 HyperLink klnikUpdate = (HyperLink)e.Row.FindControl("hlinkUpdate");
                 HiddenField hdnBusID = (HiddenField)e.Row.FindControl("hdnPNRNo");
                 HyperLink hlinkSchedule = (HyperLink)e.Row.FindControl("hlinkAddSchedule");
+                HyperLink hlBusDelete = (HyperLink)e.Row.FindControl("hlBusDelete");
                 HiddenField hdnRouteID = (HiddenField)e.Row.FindControl("hdnRouteID");
                 klnikUpdate.NavigateUrl = "BusDetails.aspx?BusID=" + hdnBusID.Value;
                 hlinkSchedule.NavigateUrl = "BusScheduleDetails.aspx?BusID=" + hdnBusID.Value + "&RouteID=" + hdnRouteID.Value;
+                hlBusDelete.NavigateUrl = "BusDetailsReport.aspx?BusID=" + hdnBusID.Value;
+
             }
         }
 
+        protected void btn_del(string x)
+        {
+            SqlCommand com = new SqlCommand("DELETE FROM BusMaster WHERE BusId='"+x+"';", connString);
+            com.ExecuteNonQuery();
+            bindBusDetailsReport();
+        }
+        
         
     }
 }

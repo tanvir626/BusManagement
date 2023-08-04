@@ -8,7 +8,7 @@
         <div class="col-lg-8 col-sm-8 col-md-2 col-sm-offset-2 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Add Boarding Details</h3>
+                    <h3 class="panel-title">Add PickUp Point</h3>
                 </div>
                 <div class="panel-body">
                     <asp:ValidationSummary ID="vsRegister" runat="server" CssClass="alert alert-danger" ShowSummary="true" ValidationGroup="vgRegister" />

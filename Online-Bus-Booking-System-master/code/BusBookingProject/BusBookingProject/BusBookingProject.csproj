@@ -103,6 +103,7 @@
     <Content Include="Admin\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Admin\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="img\bkash.png" />
+    <Content Include="img\cover.jpg" />
     <Content Include="img\nogod.png" />
     <Content Include="img\rocket.png" />
     <Content Include="WebForm1.aspx" />

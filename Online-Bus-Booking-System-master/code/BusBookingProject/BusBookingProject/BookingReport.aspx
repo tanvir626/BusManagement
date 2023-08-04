@@ -16,10 +16,10 @@
                         <asp:BoundField HeaderText="PNRNo" DataField="PNRNo" >
                         <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         </asp:BoundField>
-                        <asp:BoundField HeaderText="First Name" DataField="Fname" >
+                        <asp:BoundField HeaderText="Origin" DataField="Origin" >
                         <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         </asp:BoundField>
-                        <asp:BoundField HeaderText="Last Name" DataField="Lname" >
+                        <asp:BoundField HeaderText="Destination" DataField="Destination" >
                         <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         </asp:BoundField>
                         <asp:BoundField HeaderText="Travel Date" DataField="TravelDate" >

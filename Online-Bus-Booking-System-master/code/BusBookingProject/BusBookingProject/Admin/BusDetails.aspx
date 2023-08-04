@@ -27,7 +27,7 @@
                                     CssClass="text-danger" ErrorMessage="Seats Row is required." /><br />
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="Label1" runat="server" Text="Origin" Font-Bold="true"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="Origin with Point" Font-Bold="true"></asp:Label>
                             <asp:TextBox ID="txtOrigin" runat="server" class="form-control input-sm floatlabel" />
                              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtOrigin" Display="None" ID="RequiredFieldValidator1" ValidationGroup="vgRegister"
                                     CssClass="text-danger" ErrorMessage="Origin is Required" /><br />
@@ -59,7 +59,7 @@
                                     CssClass="text-danger" ErrorMessage="Seats Column is Require" /><br />
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="Label2" runat="server" Text="Destination" Font-Bold="true"></asp:Label>
+                            <asp:Label ID="Label2" runat="server" Text="Destination with point" Font-Bold="true"></asp:Label>
                             <asp:TextBox ID="txtDetination" runat="server" class="form-control input-sm floatlabel" />
                              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtDetination" Display="None" ID="RequiredFieldValidator2" ValidationGroup="vgRegister"
                                     CssClass="text-danger" ErrorMessage="Destination is Required" /><br />

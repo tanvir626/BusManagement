@@ -12,7 +12,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar navbar-default navbar-fixed-top ">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -40,14 +40,16 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <% if(Session["UserName"]==null){ %>
-                        <li><a runat="server" href="../Default.aspx" style="font-weight: bold" title="Login">Home</a></li>
-                        <li><a runat="server" href="AdminLogin.aspx" id="linkLogin" style="font-weight: bold" title="Login">AdminLogin</a></li>
+                       <%-- <li><a runat="server" href="../Default.aspx" style="font-weight: bold" title="Login">Home</a></li>
+                        <li><a runat="server" href="AdminLogin.aspx" id="linkLogin" style="font-weight: bold" title="Login">AdminLogin</a></li>--%>
                         <%}else{ %>
-                        <li><a runat="server" href="../Default.aspx" style="font-weight: bold" title="Login">Home</a></li>
-                        <li><a runat="server" href="#" title="Manage your account" id="lnkWelcome" style="font-weight: bold">Hello, <%: Session["UserName"]  %>!</a></li>
+                       <%-- <li><a runat="server" href="../Default.aspx" style="font-weight: bold" title="Login">Home</a></li>
+                        <li><a runat="server" href="#" title="Manage your account" id="lnkWelcome" style="font-weight: bold">Hello, <%: Session["UserName"]  %>!</a></li>--%>
                         <li>
-                            <a runat="server" href="AdminLogin.aspx" id="A1" style="font-weight: bold">Logout</a></li>
+                            <a runat="server" href="~/Default.aspx" id="A1" style="font-weight: bold">Logout</a>
+
                         </li>
+                        
                         <%} %>
                     </ul>
                 </div>

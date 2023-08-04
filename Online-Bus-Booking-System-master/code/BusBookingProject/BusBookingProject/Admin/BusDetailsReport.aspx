@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container" style="margin-top:6%">
         <asp:GridView ID="gdBusDetails" runat="server" EmptyDataText="No Record Found...." AutoGenerateColumns="False" AllowPaging="True" PageSize="20" CssClass="table table-hover table-bordered"
-                    Width="100%" Font-Size="12pt" OnRowDataBound="gdBusDetails_RowDataBound" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" >
+                    Width="100%" Font-Size="12pt" OnRowDataBound="gdBusDetails_RowDataBound" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical"   >
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:TemplateField HeaderText="Sr.No">
@@ -66,8 +66,9 @@
                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Action">
                             <ItemTemplate>
-                                <asp:HyperLink ID="hlinkUpdate" runat="server" >Update Details</asp:HyperLink>
-                                 <asp:HyperLink ID="hlinkAddSchedule" runat="server" >Add Bus Schedule</asp:HyperLink>
+                                <asp:HyperLink ID="hlinkUpdate" class="btn btn-info" runat="server" >Update </asp:HyperLink>
+                                 <asp:HyperLink ID="hlinkAddSchedule" class="btn btn-success" runat="server" >Add Schedule</asp:HyperLink>
+                                <asp:HyperLink ID="hlBusDelete" class="btn btn-danger" runat="server" >Remove</asp:HyperLink>
                                 <asp:HiddenField ID="hdnPNRNo" runat="server" Value='<%# Eval("BusId") %>' />
                                  <asp:HiddenField ID="hdnRouteID" runat="server" Value='<%# Eval("RouteID") %>' />
                             </ItemTemplate>

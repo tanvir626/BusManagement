@@ -20,7 +20,7 @@
                                     CssClass="text-danger" ErrorMessage="First Name is required." /><br />
                         </div>
                        <div class="form-group">
-                            <asp:Label ID="lblUserName" runat="server" Text="Mobile No/User Name" Font-Bold="true"></asp:Label>
+                            <asp:Label ID="lblUserName" runat="server" Text="Mobile No" Font-Bold="true"></asp:Label>
                             <asp:TextBox ID="txtMobileNo" runat="server" class="form-control input-sm floatlabel" />
                              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtMobileNo" Display="None" ID="rfVMobileNo" ValidationGroup="vgRegister"
                                     CssClass="text-danger" ErrorMessage="Mobile No is required." /><br />
@@ -43,7 +43,7 @@
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
-                            <asp:Label ID="lblEmail" runat="server" Text="Email ID" Font-Bold="true"></asp:Label>
+                            <asp:Label ID="lblEmail" runat="server" Text="Email" Font-Bold="true"></asp:Label>
                             <asp:TextBox ID="txtEmailID" runat="server" class="form-control input-sm floatlabel" />
                              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmailID" Display="None" ID="rfVEmail" ValidationGroup="vgRegister"
                                     CssClass="text-danger" ErrorMessage="Email Id is required." /><br />
