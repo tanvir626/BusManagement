@@ -52,7 +52,7 @@
                         <asp:TemplateField HeaderText="Action">
                             <ItemTemplate>
                                 <asp:HyperLink ID="hlinkBoarding" runat="server" >Add Boarding Points</asp:HyperLink>
-                                <asp:HyperLink ID="hlinkdel" runat="server" >Delete</asp:HyperLink>
+                                <%--<asp:HyperLink ID="hlinkdel" runat="server" >Delete</asp:HyperLink>--%>
                                  <asp:HiddenField ID="hdnRouteID" runat="server" Value='<%# Eval("RouteID") %>' />
                                  <asp:HiddenField ID="hdnBusID" runat="server" Value='<%# Eval("BusId") %>' />
                                 <asp:HiddenField ID="hdnDepartureTime" runat="server" Value='<%# Eval("DepartureTime") %>' />

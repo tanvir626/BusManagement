@@ -34,7 +34,7 @@
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Email">
                     <ItemTemplate>
-                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server"  CssClass="form-control"></asp:TextBox>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Contact">

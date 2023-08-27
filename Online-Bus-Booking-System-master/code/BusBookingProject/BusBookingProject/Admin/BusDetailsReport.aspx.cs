@@ -79,7 +79,15 @@ namespace BusBookingProject.Admin
         protected void btn_del(string x)
         {
             SqlCommand com = new SqlCommand("DELETE FROM BusMaster WHERE BusId='"+x+"';", connString);
+            SqlCommand com1 = new SqlCommand("DELETE FROM BookingMaster WHERE BusId='" + x + "';", connString);
+            SqlCommand com2 = new SqlCommand("DELETE FROM PickUpStand WHERE BusId='" + x + "';", connString);
+            SqlCommand com3 = new SqlCommand("DELETE FROM RouteDetails WHERE BusId='" + x + "';", connString);
+            SqlCommand com4 = new SqlCommand("DELETE FROM ScheduleMaster WHERE BusId='" + x + "';", connString);
             com.ExecuteNonQuery();
+            com1.ExecuteNonQuery();
+            com2.ExecuteNonQuery();
+            com3.ExecuteNonQuery();
+            com4.ExecuteNonQuery();
             bindBusDetailsReport();
         }
         

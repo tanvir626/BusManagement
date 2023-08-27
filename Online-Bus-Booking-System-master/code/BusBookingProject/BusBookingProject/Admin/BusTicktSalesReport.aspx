@@ -21,7 +21,7 @@
     </div>
     <div class="container auto-style1 text-center"style="background-color:white;margin-top:0%;margin-left:3%; height: 67px; width: 1198px; text-align: center;" >
         <asp:TextBox runat="server"  id="from" placeholder="From" CssClass="form-control" color="black"  style="float:left;margin-left:3%;margin-top:1%;margin-bottom:1%" Height="49px" Width="475px"></asp:TextBox>
-        <asp:TextBox runat="server"  ID="to"  placeholder="To" CssClass="form-control" color="black"  style="float:left;margin-left:4%;margin-right:2%; margin-top:1%;margin-bottom:1%" Height="49px" Width="475px" ForeColor="#000066"></asp:TextBox>
+       <asp:TextBox runat="server"  id="to1" placeholder="From" CssClass="form-control" color="black"  style="float:left;margin-left:3%;margin-right:20px;margin-top:1%;margin-bottom:1%" Height="49px" Width="475px"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" Text="Search" ForeColor="Black" Height="43px" style="margin-top:1%;" Width="90px" OnClick="Button1_Click" />
     </div>
     <div style="margin-top:0%;margin-left:3%; height: 365px;" class="auto-style1">
@@ -53,7 +53,7 @@
                 <asp:BoundField DataField="Fare" HeaderText="Fare" SortExpression="Fare" >
                 <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                 </asp:BoundField>
-                <asp:BoundField DataField="BookedSeat" HeaderText="BookedSeat" SortExpression="BookedSeat" >
+                <asp:BoundField DataField="TotalTickets" HeaderText="No of Tickets" SortExpression="TotalTickets" >
                 <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                 </asp:BoundField>
                 <asp:TemplateField HeaderText="Subtotal">
@@ -81,15 +81,30 @@
             </h2>
         </div>
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineBusBookingConnectionString %>" SelectCommand="SELECT ScheduleMaster.Date, BusMaster.BusName, BookingMaster.Origin, BookingMaster.Destination, BusMaster.BustType, ScheduleMaster.Fare, ScheduleMaster.BookedSeats AS BookedSeat
-FROM BookingMaster
-INNER JOIN ScheduleMaster ON BookingMaster.ScheduleID = ScheduleMaster.ScheduleId
-INNER JOIN BusMaster ON BookingMaster.BusId = BusMaster.BusId
-WHERE ScheduleMaster.Date BETWEEN @start AND @end
-ORDER BY ScheduleMaster.Date ASC;" >
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineBusBookingConnectionString %>" SelectCommand="SELECT
+    ScheduleMaster.Date,
+    BusMaster.BusName,
+    BookingMaster.Origin,
+    BookingMaster.Destination,
+    BusMaster.BustType,
+    ScheduleMaster.Fare,
+    PNRDetails.TotalTickets
+FROM
+    BookingMaster
+INNER JOIN
+    ScheduleMaster ON BookingMaster.ScheduleID = ScheduleMaster.ScheduleId
+INNER JOIN
+    BusMaster ON BookingMaster.BusId = BusMaster.BusId
+INNER JOIN
+    PNRDetails ON BookingMaster.PNRNo = PNRDetails.PNRNo
+WHERE
+    ScheduleMaster.Date BETWEEN @start AND @end
+ORDER BY
+    ScheduleMaster.Date ASC;" >
+            
             <SelectParameters>
                 <asp:ControlParameter ControlID="from" Name="start" PropertyName="Text" />
-                <asp:ControlParameter ControlID="to" Name="end" PropertyName="Text" />
+                <asp:ControlParameter ControlID="to1" Name="end" PropertyName="Text" />
             </SelectParameters>
         </asp:SqlDataSource>
     <br />
