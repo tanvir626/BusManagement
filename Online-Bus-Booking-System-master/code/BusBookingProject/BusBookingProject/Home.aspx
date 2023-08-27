@@ -160,7 +160,7 @@
                                 <div class="form-group">
                                    <asp:Label ID="lblbustype" runat="server" Text="Type" Font-Bold="true"></asp:Label>
                                      <asp:DropDownList ID="ddlBustType" class="form-control input-sm floatlabel" runat="server">
-                                         <asp:ListItem>--Select--</asp:ListItem>
+                                         <asp:ListItem >--Select--</asp:ListItem>
                                          <asp:ListItem>AC</asp:ListItem>
                                          <asp:ListItem>Normal</asp:ListItem>
                                     </asp:DropDownList>

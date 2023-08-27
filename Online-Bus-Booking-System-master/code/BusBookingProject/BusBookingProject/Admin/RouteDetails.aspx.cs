@@ -71,5 +71,31 @@ namespace BusBookingProject.Admin
             SqlCommand com = new SqlCommand("");
             con.Close();
         }
+
+        protected void gdRouteDetails_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataSet dsGetData = new DataSet();
+            SqlCommand sqlCmd = new SqlCommand();
+            if (connString.State == ConnectionState.Closed)
+            {
+                connString.Open();
+            }
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.CommandText = "ispDelRouteDetails";
+            sqlCmd.Connection = connString;
+            SqlDataAdapter sda = new SqlDataAdapter(sqlCmd);
+            sda.Fill(dsGetData);
+            if (dsGetData.Tables[0].Rows.Count > 0)
+            {
+                gdRouteDetails.DataSource = dsGetData.Tables[0];
+                gdRouteDetails.DataBind();
+            }
+            else
+            {
+                gdRouteDetails.DataSource = null;
+                gdRouteDetails.EmptyDataText = "No Records Found";
+                gdRouteDetails.DataBind();
+            }
+        }
     }
 }

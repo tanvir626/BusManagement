@@ -114,14 +114,14 @@
                     <div class="col-lg-8">
                         <table runat="server">
                             <tr>
-                                <td style="color:black;font-size:large">Front</td>
+                                <td style="color:black;font-size:large">&nbsp;</td>
                                 <td style="margin-left:5%">
                                     <div id="holder" style="border:none;color:white;overflow:auto">
                                         <ul id="place" style="margin-top:30%">
                                         </ul>
                                     </div>
                                 </td>
-                                <td style="color:black;font-size:large">Rear</td>
+                                <td style="color:black;font-size:large">&nbsp;</td>
                             </tr>
                         </table>
 
