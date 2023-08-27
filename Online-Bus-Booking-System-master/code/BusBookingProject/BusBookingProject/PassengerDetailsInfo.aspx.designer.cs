@@ -123,13 +123,13 @@ namespace BusBookingProject
         protected global::System.Web.UI.WebControls.DropDownList ddlCardType;
 
         /// <summary>
-        /// rfvFirstName control.
+        /// rfvcardtype control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFirstName;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcardtype;
 
         /// <summary>
         /// lblBankName control.
@@ -150,13 +150,13 @@ namespace BusBookingProject
         protected global::System.Web.UI.WebControls.DropDownList ddlBank;
 
         /// <summary>
-        /// rfVMobileNo control.
+        /// rfVbank control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfVMobileNo;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfVbank;
 
         /// <summary>
         /// lblLastName control.
@@ -186,6 +186,15 @@ namespace BusBookingProject
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfVLastName;
 
         /// <summary>
+        /// RegularExpressionValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
+
+        /// <summary>
         /// lblPassword control.
         /// </summary>
         /// <remarks>
@@ -211,6 +220,15 @@ namespace BusBookingProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPassword;
+
+        /// <summary>
+        /// RegularExpressionValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator3;
 
         /// <summary>
         /// btnSave control.
