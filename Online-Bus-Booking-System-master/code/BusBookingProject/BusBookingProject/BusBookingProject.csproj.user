@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <NameOfLastUsedPublishProfile>BusBooking</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\BusManagement-main\Online-Bus-Booking-System-master\code\BusBookingProject\BusBookingProject\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />

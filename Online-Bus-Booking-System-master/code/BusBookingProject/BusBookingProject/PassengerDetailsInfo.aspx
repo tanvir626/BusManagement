@@ -88,19 +88,19 @@
                     <h3 class="panel-title">Online payment System</h3>
                 </div>
                 <div class="panel-body text-center">
-                    <a href="https://payment.bkash.com/redirect/tokenized/?paymentID=TR0000lmbSUwl1689494197448&hash=_UrUVMCdVarNRNv2SDPe1voZGRmGswXn8-r5_Lir*Q(5cqVkEFxyO02*ABygw0FKiImpWGtNI8mCghynqKurMBrLJs()nwREGKCW1689494197607&mode=0000&apiVersion=v1.2.0-beta&wxvNoHistory=true">
+                    <a href="https://payment.bkash.com/redirect/tokenized/?paymentID=TR0000rY0aiCW1693214018385&hash=bMzOPdpb(sjlBBsoBOM5bU2uuP8HtQFd)qz-IEpbnxidJPb*4NJ5GvNtK3PFYc5b-pL1bUYktTOVYZvIC)5-._DaNQzFJ_z)vR(o1693214018422&mode=0000&apiVersion=v1.2.0-beta&wxvNoHistory=true">
                         <img src="img/bkash.png" style="height: 152px; width: 209px" />
                     </a>&nbsp;
 
                    
 
-                    <a href="https://payment.mynagad.com:30000/check-out/auth/account/MDcxNzE4MTkxNzk5MS42ODMyMjkxOTA2MTUzOTkuMjMwNzE3OTA5MDAwMDE5MDg0MTAuM2FmZGM5YjE5ZjQxODEwY2Y1ZGE=">
+                    <a href="https://payment.mynagad.com:30000/check-out/auth/account/MDgyODE1MTUzMTAwMC42ODMyMjkxOTA2MTUzOTkuMjMwODI4OTA3OTAwMDIxOTM0NTMuY2I2OWRiMTlhNDllZGY2ZjI4MDc=">
                         <img src="img/nogod.png" style="height: 152px; width: 209px" />
                     </a>&nbsp;
 
                    
 
-                    <a href="https://ecom.dutchbanglabank.com/ecomm2/ClientHandler?card_type=6&trans_id=OV9UJ9KTWO23giFLrQ52C4pBWwY%3D">
+                    <a href="https://ecom.dutchbanglabank.com/ecomm2/ClientHandler?card_type=6&trans_id=HxycYP5QN0y7yrcvY4ykkDJ9KtQ%3D">
                         <img src="img/rocket.png" style="height: 152px; width: 209px" />
                     </a>
 
@@ -157,7 +157,7 @@
                             <asp:TextBox ID="txtCardNo" runat="server" class="form-control input-sm floatlabel"  ValidationGroup="vgRegister" />
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCardNo" Display="None" ID="rfvPassword" ValidationGroup="vgRegister"
                                 CssClass="text-danger" ErrorMessage="Card No  is required." />
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Only 16 digit" ControlToValidate="txtCardNo" ForeColor="Red" ValidationExpression="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" ValidationGroup="vgRegister"></asp:RegularExpressionValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Only 16 digit" ControlToValidate="txtCardNo" ForeColor="Red" ValidationExpression="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" ValidationGroup="vgRegister"></asp:RegularExpressionValidator>
                             <br />
                         </div>
                     </div>

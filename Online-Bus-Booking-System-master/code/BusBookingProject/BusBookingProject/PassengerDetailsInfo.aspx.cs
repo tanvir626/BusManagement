@@ -282,7 +282,18 @@ namespace BusBookingProject
 
         protected void btnConirmBooking_Click(object sender, EventArgs e)
         {
-            paymentOption.Visible = true;
+            ViewState["Count"] = Convert.ToInt32(ViewState["Count"]) + 1;
+            string seatNo = Convert.ToString(Request.QueryString["SeatNo"]);
+            string[] seatArray = seatNo.Split(',').Select(str => str.Trim()).ToArray();
+            if (Convert.ToInt32(ViewState["Count"]) <= seatArray.Length)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please Give Information of '+'" + seatArray.Length + " Passanger')", true);
+            }
+            else
+            {
+                paymentOption.Visible = true;
+            }
+           
         }
 
        
